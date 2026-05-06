@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'ISD Marketing Template',
-    'version': '19.0.0.0.0',
+    'version': '18.0.1.0.0',
     'category': 'ISD Modules',
     'summary': 'Centralized email and messaging template management with HTML/CSS support',
     'description': """
