@@ -1,0 +1,53 @@
+// HTML Source Editor Styling
+
+.o_html_editor_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    i {
+        font-size: 14px;
+    }
+
+    &:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+        color: white;
+    }
+}
+
+.o_html_source_editor {
+    .o_html_source_textarea {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        padding: 12px;
+        resize: vertical;
+        min-height: 500px;
+
+        &:focus {
+            background-color: #ffffff;
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+    }
+
+    .alert-info {
+        margin-top: 15px;
+        background-color: #e7f3ff;
+        border-color: #b3d9ff;
+        color: #004085;
+
+        i {
+            margin-right: 5px;
+        }
+    }
+}
+
+// Modal size adjustments
+.modal.o_technical_modal.modal-xl {
+    .modal-dialog {
+        max-width: 90%;
+    }
+}

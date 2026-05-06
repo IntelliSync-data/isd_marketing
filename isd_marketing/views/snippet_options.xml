@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Snippet Options for HTML Code Block -->
+    <template id="snippet_options_html_code" inherit_id="web_editor.snippet_options" name="HTML Code Block Options">
+        <xpath expr="//div[@data-js='DynamicSvg']" position="after">
+            <!-- Options for HTML Code Block -->
+            <div data-js="HtmlCodeBlock" data-selector=".s_html_code">
+                <we-row string="Code">
+                    <we-button data-edit-html-code="" data-no-preview="true"
+                            class="o_we_edit_code o_we_no_toggle o_we_bg_success active"
+                            title="Edit HTML code">Edit</we-button>
+                </we-row>
+                <we-button-group string="Alignment">
+                    <we-button class="fa fa-fw fa-align-left" title="Left" data-select-class="text-start"/>
+                    <we-button class="fa fa-fw fa-align-center" title="Center" data-select-class="text-center"/>
+                    <we-button class="fa fa-fw fa-align-right" title="Right" data-select-class="text-end"/>
+                </we-button-group>
+            </div>
+        </xpath>
+    </template>
+</odoo>

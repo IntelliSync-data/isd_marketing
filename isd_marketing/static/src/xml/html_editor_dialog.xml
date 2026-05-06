@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="isd_marketing.HTMLCodeEditorDialog">
+        <Dialog title="props.title" size="'xl'">
+            <p class="h5">Do not copy/paste code you do not understand, this could put your data at risk.</p>
+            <p>If you need to add analytics or marketing tags, inject code in your &lt;head&gt; or &lt;body&gt; instead.</p>
+            <div class="mb-3">
+                <textarea
+                    class="form-control font-monospace bg-dark text-light"
+                    t-model="state.value"
+                    rows="20"
+                    style="font-size: 13px; white-space: pre; overflow-x: auto; tab-size: 4;"
+                    placeholder="Enter your HTML code here..."/>
+            </div>
+            <t t-set-slot="footer">
+                <button class="btn btn-primary" t-on-click="onConfirm">Save</button>
+                <button class="btn" t-on-click="props.close">Discard</button>
+            </t>
+        </Dialog>
+    </t>
+</templates>

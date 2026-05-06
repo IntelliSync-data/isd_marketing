@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Kanban View (Gallery) -->
+    <record id="view_media_library_kanban" model="ir.ui.view">
+        <field name="name">media.library.kanban</field>
+        <field name="model">media.library</field>
+        <field name="arch" type="xml">
+            <kanban string="Media Library" class="o_kanban_media_library">
+                <field name="id"/>
+                <field name="name"/>
+                <field name="thumbnail"/>
+                <field name="url"/>
+                <field name="file_type"/>
+                <field name="storage_method"/>
+                <field name="file_size"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card oe_kanban_global_click" style="width: 200px;">
+                            <div class="o_kanban_image" style="height: 150px; overflow: hidden; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                                <t t-if="record.file_type.raw_value == 'image'">
+                                    <img t-att-src="kanban_image('media.library', 'thumbnail', record.id.raw_value)"
+                                         alt="thumbnail"
+                                         style="max-width: 100%; max-height: 100%; object-fit: contain;"/>
+                                </t>
+                                <t t-else="">
+                                    <i class="fa fa-file-video-o fa-4x text-muted"/>
+                                </t>
+                            </div>
+                            <div class="oe_kanban_details" style="padding: 10px;">
+                                <strong class="o_kanban_record_title" style="display: block; margin-bottom: 5px; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                    <field name="name"/>
+                                </strong>
+                                <div class="text-muted" style="font-size: 11px;">
+                                    <t t-if="record.file_type.raw_value == 'image'">
+                                        <i class="fa fa-image"/> Image
+                                    </t>
+                                    <t t-else="">
+                                        <i class="fa fa-video-camera"/> Video
+                                    </t>
+                                    | <field name="file_size" widget="integer"/> bytes
+                                </div>
+                                <div style="margin-top: 8px;">
+                                    <button type="object" name="action_copy_url" class="btn btn-sm btn-primary" style="padding: 4px 8px; font-size: 11px;">
+                                        <i class="fa fa-copy"/> Copy URL
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- List View -->
+    <record id="view_media_library_list" model="ir.ui.view">
+        <field name="name">media.library.list</field>
+        <field name="model">media.library</field>
+        <field name="arch" type="xml">
+            <list string="Media Library">
+                <field name="thumbnail" widget="image" options="{'size': [50, 50]}"/>
+                <field name="name"/>
+                <field name="file_type"/>
+                <field name="storage_method"/>
+                <field name="file_size" widget="integer"/>
+                <field name="url" widget="url"/>
+                <field name="upload_date"/>
+                <field name="uploaded_by"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_media_library_form" model="ir.ui.view">
+        <field name="name">media.library.form</field>
+        <field name="model">media.library</field>
+        <field name="arch" type="xml">
+            <form string="Media">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="e.g., banner-image.png"/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="file_type"/>
+                            <field name="mime_type" readonly="1"/>
+                            <field name="file_size" widget="integer" readonly="1"/>
+                            <field name="extension" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="storage_method" readonly="1"/>
+                            <field name="upload_date" readonly="1"/>
+                            <field name="uploaded_by" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <group string="Public URL">
+                        <field name="url" widget="url" readonly="1" nolabel="1"/>
+                    </group>
+
+                    <group string="Description">
+                        <field name="description" nolabel="1" placeholder="Add description..."/>
+                    </group>
+
+                    <notebook>
+                        <page string="Preview" name="preview">
+                            <group>
+                                <field name="thumbnail" widget="image" options="{'size': [600, 400]}" nolabel="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_media_library_search" model="ir.ui.view">
+        <field name="name">media.library.search</field>
+        <field name="model">media.library</field>
+        <field name="arch" type="xml">
+            <search string="Media Library">
+                <field name="name" string="File Name"/>
+                <field name="description"/>
+                <field name="uploaded_by"/>
+
+                <filter string="Images" name="filter_images" domain="[('file_type', '=', 'image')]"/>
+                <filter string="Videos" name="filter_videos" domain="[('file_type', '=', 'video')]"/>
+
+                <separator/>
+
+                <filter string="Local Storage" name="filter_local" domain="[('storage_method', '=', 'local')]"/>
+                <filter string="S3 Storage" name="filter_s3" domain="[('storage_method', '=', 's3')]"/>
+
+                <separator/>
+
+                <filter string="Today" name="filter_today" domain="[('upload_date', '&gt;=', datetime.datetime.combine(context_today(), datetime.time(0,0,0)))]"/>
+                <filter string="Last 7 Days" name="filter_week" domain="[('upload_date', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
+                <filter string="This Month" name="filter_month" domain="[('upload_date', '&gt;=', (context_today().replace(day=1)).strftime('%Y-%m-%d'))]"/>
+
+                <group expand="0" string="Group By">
+                    <filter string="File Type" name="group_type" context="{'group_by': 'file_type'}"/>
+                    <filter string="Storage Method" name="group_storage" context="{'group_by': 'storage_method'}"/>
+                    <filter string="Upload Date" name="group_date" context="{'group_by': 'upload_date:month'}"/>
+                    <filter string="Uploaded By" name="group_user" context="{'group_by': 'uploaded_by'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_media_library" model="ir.actions.act_window">
+        <field name="name">Media Library</field>
+        <field name="res_model">media.library</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No media files yet
+            </p>
+            <p>
+                Click the <strong>Upload</strong> button above to add images or videos.<br/>
+                Supports images (JPG, PNG, GIF, WebP) and videos (MP4, MOV, WebM).
+            </p>
+        </field>
+    </record>
+
+    <!-- Button to add to Media Library menu -->
+    <record id="action_media_library_with_upload" model="ir.actions.act_window">
+        <field name="name">Media Library</field>
+        <field name="res_model">media.library</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="context">{
+            'search_default_filter_images': 0,
+        }</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No media files yet
+            </p>
+            <p>
+                Click the <strong>Upload</strong> button above to add images or videos.<br/>
+                Supports images (JPG, PNG, GIF, WebP) and videos (MP4, MOV, WebM).
+            </p>
+        </field>
+    </record>
+
+</odoo>

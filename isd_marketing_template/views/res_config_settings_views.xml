@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Extend Settings -->
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.media.library</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <div class="app_settings_block" data-string="Media Library" string="Media Library" data-key="isd_marketing_template">
+                    <h2>Media Library Storage</h2>
+
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_panel">
+                                <field name="media_storage_method" widget="radio"/>
+                            </div>
+                            <div class="o_setting_right_panel">
+                                <label for="media_storage_method"/>
+                                <div class="text-muted">
+                                    Choose where to store uploaded media files
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 invisible="media_storage_method != 's3'">AWS S3 Configuration</h2>
+
+                    <div class="row mt16 o_settings_container" invisible="media_storage_method != 's3'">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <label for="media_s3_access_key" string="AWS Access Key ID"/>
+                                <field name="media_s3_access_key" placeholder="AKIAIOSFODNN7EXAMPLE" password="True"/>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <label for="media_s3_secret_key" string="AWS Secret Access Key"/>
+                                <field name="media_s3_secret_key" placeholder="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY" password="True"/>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <label for="media_s3_bucket" string="S3 Bucket Name"/>
+                                <field name="media_s3_bucket" placeholder="my-media-bucket"/>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <label for="media_s3_region" string="AWS Region"/>
+                                <field name="media_s3_region"/>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <label for="media_s3_endpoint" string="Custom Endpoint URL"/>
+                                <field name="media_s3_endpoint" placeholder="https://nyc3.digitaloceanspaces.com"/>
+                                <div class="text-muted">
+                                    Optional: For S3-compatible services (MinIO, DigitalOcean Spaces)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="media_s3_use_ssl"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="media_s3_use_ssl"/>
+                                <div class="text-muted">
+                                    Use HTTPS for secure connections to S3
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

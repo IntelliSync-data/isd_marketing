@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- List View -->
+    <record id="view_marketing_template_tree" model="ir.ui.view">
+        <field name="name">marketing.template.tree</field>
+        <field name="model">marketing.template</field>
+        <field name="arch" type="xml">
+            <list string="Marketing Templates">
+                <field name="name"/>
+                <field name="template_type"/>
+                <field name="module_reference"/>
+                <field name="usage_count"/>
+                <field name="last_used_date"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_marketing_template_form" model="ir.ui.view">
+        <field name="name">marketing.template.form</field>
+        <field name="model">marketing.template</field>
+        <field name="arch" type="xml">
+            <form string="Marketing Template">
+                <header>
+                    <button name="action_duplicate" string="Duplicate" type="object" icon="fa-copy"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="action_view_usage" icon="fa-line-chart">
+                            <field name="usage_count" widget="statinfo" string="Uses"/>
+                        </button>
+                    </div>
+
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" placeholder="e.g., Payment Confirmation Email"/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="template_type" widget="radio"/>
+                            <field name="module_reference"/>
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                        <group>
+                            <field name="usage_count" readonly="1"/>
+                            <field name="last_used_date" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <!-- Email Subject (only for email type) -->
+                    <group invisible="template_type != 'email'">
+                        <field name="subject" placeholder="e.g., Payment Confirmation - {{ object.name }}"/>
+                    </group>
+
+                    <!-- Editor Mode Toggle -->
+                    <group>
+                        <field name="editor_mode" widget="radio" invisible="template_type != 'email'"/>
+                        <field name="auto_inline_css" widget="boolean_toggle" invisible="template_type != 'email'"/>
+                    </group>
+
+                    <notebook>
+                        <!-- Content Tab -->
+                        <page string="Content" name="content">
+                            <!-- WYSIWYG Editor for EMAIL -->
+                            <field name="content_html"
+                                   widget="html"
+                                   options="{'style-inline': true}"
+                                   invisible="template_type != 'email' or editor_mode != 'wysiwyg'"
+                                   placeholder="Enter your email content here. You can use Jinja2 variables like {{ object.name }}"/>
+
+                            <!-- Code Editor for EMAIL -->
+                            <field name="content_html"
+                                   widget="ace"
+                                   options="{'mode': 'html'}"
+                                   invisible="template_type != 'email' or editor_mode != 'code'"
+                                   placeholder="Enter your HTML/Jinja2 template here..."/>
+
+                            <!-- Text Editor for MESSAGE -->
+                            <field name="content_text"
+                                   widget="text"
+                                   invisible="template_type != 'message'"
+                                   placeholder="Enter your message content here. You can use Jinja2 variables like {{ object.name }}"/>
+                        </page>
+
+                        <!-- Preview Tab -->
+                        <page string="Preview" name="preview">
+                            <div class="alert alert-info" role="alert">
+                                <i class="fa fa-info-circle"/> This is a preview with sample data. Actual output will use real data from records.
+                            </div>
+                            <field name="preview_html" widget="html" readonly="1" nolabel="1"/>
+                        </page>
+
+                        <!-- Variables Tab -->
+                        <page string="Available Variables" name="variables">
+                            <div class="alert alert-success" role="alert">
+                                <i class="fa fa-lightbulb-o"/> <strong>Tip:</strong> Use these variables in your template content and subject line.
+                            </div>
+                            <field name="available_variables" widget="text" readonly="1" nolabel="1"/>
+                        </page>
+
+                        <!-- Notes Tab -->
+                        <page string="Notes" name="notes">
+                            <field name="notes" placeholder="Internal notes about this template..." nolabel="1"/>
+                        </page>
+
+                        <!-- API Integration Tab -->
+                        <page string="API Integration" name="api" invisible="template_type != 'email'">
+                            <div class="alert alert-success mt-3" role="alert">
+                                <h4><i class="fa fa-code"/> API Endpoint</h4>
+                                <p>Send emails using this template from external applications (websites, forms, etc.)</p>
+                                <br/>
+                                <p><strong>POST Request:</strong></p>
+                                <pre>POST https://workplace.intellisyncdata.com/api/template/send
+Content-Type: application/json
+
+{
+  "template_id": <field name="id" readonly="1"/>,
+  "email": "user@example.com",
+  "variables": {
+    "name": "John Doe",
+    "download_link": "https://example.com/file.pdf"
+  }
+}</pre>
+                                <br/>
+                                <p><strong>JavaScript Example:</strong></p>
+                                <pre>fetch('https://workplace.intellisyncdata.com/api/template/send', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify({
+    template_id: <field name="id" readonly="1"/>,
+    email: 'user@example.com',
+    variables: {
+      name: 'John Doe',
+      download_link: 'https://example.com/file.pdf'
+    }
+  })
+})
+.then(res => res.json())
+.then(data => console.log(data));</pre>
+                                <br/>
+                                <p><strong>cURL Example:</strong></p>
+                                <pre>curl -X POST https://workplace.intellisyncdata.com/api/template/send \
+  -H "Content-Type: application/json" \
+  -d '{
+    "template_id": <field name="id" readonly="1"/>,
+    "email": "user@example.com",
+    "variables": {
+      "name": "John Doe",
+      "download_link": "https://example.com/download"
+    }
+  }'</pre>
+                            </div>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_marketing_template_search" model="ir.ui.view">
+        <field name="name">marketing.template.search</field>
+        <field name="model">marketing.template</field>
+        <field name="arch" type="xml">
+            <search string="Marketing Templates">
+                <field name="name" string="Template Name"/>
+                <field name="template_type"/>
+                <field name="module_reference"/>
+
+                <filter string="Email Templates" name="filter_email" domain="[('template_type', '=', 'email')]"/>
+                <filter string="Message Templates" name="filter_message" domain="[('template_type', '=', 'message')]"/>
+
+                <separator/>
+
+                <filter string="Active" name="filter_active" domain="[('active', '=', True)]"/>
+                <filter string="Archived" name="filter_inactive" domain="[('active', '=', False)]"/>
+
+                <separator/>
+
+                <group expand="0" string="Group By">
+                    <filter string="Type" name="group_type" context="{'group_by': 'template_type'}"/>
+                    <filter string="Module" name="group_module" context="{'group_by': 'module_reference'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_marketing_template" model="ir.actions.act_window">
+        <field name="name">Marketing Templates</field>
+        <field name="res_model">marketing.template</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_filter_active': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first marketing template
+            </p>
+            <p>
+                Create email and message templates with HTML/CSS support and Jinja2 variables.
+            </p>
+        </field>
+    </record>
+
+</odoo>

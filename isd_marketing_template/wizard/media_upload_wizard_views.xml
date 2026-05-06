@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Upload Wizard Form -->
+    <record id="view_media_upload_wizard_form" model="ir.ui.view">
+        <field name="name">media.upload.wizard.form</field>
+        <field name="model">media.upload.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Upload Media File">
+                <group>
+                    <field name="file_data" widget="binary" filename="file_name" required="1"/>
+                    <field name="file_name" invisible="1"/>
+                    <field name="storage_method" widget="radio"/>
+                </group>
+                <footer>
+                    <button string="Upload" name="action_upload" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Upload Wizard Action -->
+    <record id="action_media_upload_wizard" model="ir.actions.act_window">
+        <field name="name">Upload Media</field>
+        <field name="res_model">media.upload.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

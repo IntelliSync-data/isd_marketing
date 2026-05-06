@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Main Menu -->
+    <menuitem id="menu_marketing_template_root"
+              name="Marketing Templates"
+              sequence="100"
+              web_icon="isd_marketing_template,static/description/icon.png"/>
+
+    <!-- Templates Menu -->
+    <menuitem id="menu_marketing_template_templates"
+              name="Templates"
+              parent="menu_marketing_template_root"
+              action="action_marketing_template"
+              sequence="10"/>
+
+    <!-- Media Library Menu -->
+    <menuitem id="menu_marketing_template_media"
+              name="Media Library"
+              parent="menu_marketing_template_root"
+              action="action_media_library"
+              sequence="20"/>
+
+    <!-- Upload Media Submenu -->
+    <menuitem id="menu_marketing_template_media_upload"
+              name="Upload Media"
+              parent="menu_marketing_template_root"
+              action="action_media_upload_wizard"
+              sequence="21"/>
+
+    <!-- Configuration Menu -->
+    <menuitem id="menu_marketing_template_config"
+              name="Configuration"
+              parent="menu_marketing_template_root"
+              sequence="100"/>
+
+</odoo>

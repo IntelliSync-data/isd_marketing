@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="294" height="221" viewBox="0 0 294 221">
+  <!-- Background -->
+  <rect width="294" height="221" fill="#ffffff"/>
+
+  <!-- Border -->
+  <rect x="1" y="1" width="292" height="219" fill="none" stroke="#e0e0e0" stroke-width="2"/>
+
+  <!-- HTML Symbol -->
+  <g transform="translate(147, 80)">
+    <!-- < symbol -->
+    <path d="M -40 0 L -60 20 L -40 40" fill="none" stroke="#0066cc" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- / symbol -->
+    <line x1="-10" y1="40" x2="10" y2="0" stroke="#0066cc" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- > symbol -->
+    <path d="M 40 0 L 60 20 L 40 40" fill="none" stroke="#0066cc" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Title Text -->
+  <text x="147" y="150" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50" text-anchor="middle">HTML Code</text>
+
+  <!-- Subtitle -->
+  <text x="147" y="175" font-family="Arial, sans-serif" font-size="13" fill="#6c757d" text-anchor="middle">Write your custom HTML</text>
+
+  <!-- Code lines decoration -->
+  <g opacity="0.3">
+    <rect x="40" y="30" width="80" height="3" fill="#0066cc" rx="1.5"/>
+    <rect x="40" y="45" width="120" height="3" fill="#0066cc" rx="1.5"/>
+    <rect x="40" y="190" width="100" height="3" fill="#0066cc" rx="1.5"/>
+    <rect x="150" y="30" width="100" height="3" fill="#0066cc" rx="1.5"/>
+    <rect x="180" y="45" width="70" height="3" fill="#0066cc" rx="1.5"/>
+    <rect x="150" y="190" width="100" height="3" fill="#0066cc" rx="1.5"/>
+  </g>
+</svg>

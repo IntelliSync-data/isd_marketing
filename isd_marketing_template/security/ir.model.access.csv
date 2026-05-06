@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_marketing_template_user,marketing.template.user,model_marketing_template,base.group_user,1,1,1,1
+access_marketing_template_public,marketing.template.public,model_marketing_template,base.group_public,1,0,0,0
+access_media_library_user,media.library.user,model_media_library,base.group_user,1,1,1,1
+access_media_library_public,media.library.public,model_media_library,base.group_public,1,0,0,0
+access_media_upload_wizard_user,media.upload.wizard.user,model_media_upload_wizard,base.group_user,1,1,1,1

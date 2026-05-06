@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- HTML Code Block Snippet -->
+    <template id="s_html_code_block" name="HTML Code Block">
+        <section class="s_html_code pt16 pb16">
+            <template class="s_html_code_saved">
+                <p style="text-align: center; color: #6c757d;">
+                    <strong>&lt;/&gt; HTML Code Block</strong><br/>
+                    Click "Edit HTML Code" in the right panel to write your custom HTML.
+                </p>
+            </template>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="s_html_code_content" style="min-height: 100px; padding: 20px; background-color: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 5px;">
+                            <p style="text-align: center; color: #6c757d;">
+                                <strong>&lt;/&gt; HTML Code Block</strong><br/>
+                                Click "Edit HTML Code" in the right panel to write your custom HTML.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Add HTML Code block to snippets -->
+    <template id="email_designer_snippets_htmlcode" inherit_id="mass_mailing.email_designer_snippets" name="Add HTML Code Snippet">
+        <xpath expr="//snippets[@id='email_designer_body_elements']" position="inside">
+            <t t-snippet="isd_marketing.s_html_code_block" string="HTML Code" t-thumbnail="/isd_marketing/static/description/snippet_html_code.svg"/>
+        </xpath>
+    </template>
+
+    <!-- HTML Code Template (keep for backward compatibility) -->
+    <template id="theme_html_code_template" name="HTML Code Template">
+        <div class="o_mail_wrapper_td" style="width:600px;margin:0 auto;">
+            <t t-call="isd_marketing.s_html_code_block"/>
+        </div>
+    </template>
+
+    <!-- Add HTML Code template to email designer themes -->
+    <template id="email_designer_themes_htmlcode" inherit_id="mass_mailing.email_designer_themes" name="Add HTML Code Template">
+        <xpath expr="//div[@data-name='empty']" position="after">
+            <div data-name="htmlcode"
+                    title="HTML Code"
+                    data-nowrap="1"
+                    data-img="/isd_marketing/static/description/html_code_thumb.png"
+                    data-images-info='{"logo": {"format": "png"}}'>
+                <t t-call="isd_marketing.theme_html_code_template"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>
