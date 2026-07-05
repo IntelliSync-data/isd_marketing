@@ -1,4 +1,4 @@
-name: Update OpenEducCat Fishing VietNam
+name: Update ISD Marketing Fishing VietNam
 
 on:
   push:
@@ -22,17 +22,17 @@ jobs:
         script_stop: true
         script: |
           # Clone if not exists, otherwise update
-          if [ ! -d ~/addons-system/openeducat ]; then
-            git clone git@github.com:IntelliSync-data/openeducat.git ~/addons-system/openeducat
-            cd ~/addons-system/openeducat && git checkout vfo
+          if [ ! -d ~/addons-system/isd_marketing ]; then
+            git clone git@github.com:IntelliSync-data/isd_marketing.git ~/addons-system/isd_marketing
+            cd ~/addons-system/isd_marketing && git checkout vfo
           else
-            cd ~/addons-system/openeducat
+            cd ~/addons-system/isd_marketing
             git fetch origin && git reset --hard origin/vfo
           fi
           
-          # Sync openeducat directory with rsync (including deletions)
-          sudo mkdir -p /opt/custom-addons/openeducat
-          sudo rsync -av --delete ~/addons-system/openeducat/ /opt/custom-addons/openeducat/
+          # Sync isd_marketing directory with rsync (including deletions)
+          sudo mkdir -p /opt/custom-addons/isd_marketing
+          sudo rsync -av --delete ~/addons-system/isd_marketing/ /opt/custom-addons/isd_marketing/
 
     - name: Update isd_payment Module
       uses: appleboy/ssh-action@master
