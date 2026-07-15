@@ -3,20 +3,10 @@
     <!-- HTML Code Block Snippet -->
     <template id="s_html_code_block" name="HTML Code Block">
         <section class="s_html_code pt16 pb16">
-            <template class="s_html_code_saved">
-                <p style="text-align: center; color: #6c757d;">
-                    <strong>&lt;/&gt; HTML Code Block</strong><br/>
-                    Click "Edit HTML Code" in the right panel to write your custom HTML.
-                </p>
-            </template>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="s_html_code_content" style="min-height: 100px; padding: 20px; background-color: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 5px;">
-                            <p style="text-align: center; color: #6c757d;">
-                                <strong>&lt;/&gt; HTML Code Block</strong><br/>
-                                Click "Edit HTML Code" in the right panel to write your custom HTML.
-                            </p>
+                        <div class="s_html_code_content" style="min-height: 100px; padding: 20px;">
                         </div>
                     </div>
                 </div>

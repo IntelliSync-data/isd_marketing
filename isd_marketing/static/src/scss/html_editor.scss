@@ -45,6 +45,22 @@
     }
 }
 
+// Placeholder for empty HTML Code Block (editor only)
+.s_html_code_content:empty {
+    background-color: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 5px;
+
+    &::before {
+        content: '</> HTML Code Block — Click "Edit HTML Code" in the right panel';
+        display: block;
+        text-align: center;
+        color: #6c757d;
+        font-weight: 600;
+        padding: 20px;
+    }
+}
+
 // Modal size adjustments
 .modal.o_technical_modal.modal-xl {
     .modal-dialog {
