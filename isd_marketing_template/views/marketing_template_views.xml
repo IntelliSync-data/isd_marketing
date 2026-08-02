@@ -58,6 +58,11 @@
                         <field name="subject" placeholder="e.g., Payment Confirmation - {{ object.name }}"/>
                     </group>
 
+                    <!-- Dynamic Variables -->
+                    <group>
+                        <field name="variable_keys" placeholder="e.g.: name, role, amount, link"/>
+                    </group>
+
                     <!-- Editor Mode Toggle -->
                     <group>
                         <field name="editor_mode" widget="radio" invisible="template_type != 'email'"/>
@@ -111,6 +116,12 @@
 
                         <!-- API Integration Tab -->
                         <page string="API Integration" name="api" invisible="template_type != 'email'">
+                            <div class="alert alert-info mt-3" role="alert">
+                                <h4><i class="fa fa-info-circle"/> Variable Keys</h4>
+                                <p>This template expects the following variables in the <code>variables</code> payload:</p>
+                                <pre><field name="variable_keys" readonly="1"/></pre>
+                                <p>Use <code>{{ variable_name }}</code> syntax in your template content and subject.</p>
+                            </div>
                             <div class="alert alert-success mt-3" role="alert">
                                 <h4><i class="fa fa-code"/> API Endpoint</h4>
                                 <p>Send emails using this template from external applications (websites, forms, etc.)</p>
@@ -123,8 +134,8 @@ Content-Type: application/json
   "template_id": <field name="id" readonly="1"/>,
   "email": "user@example.com",
   "variables": {
-    "name": "John Doe",
-    "download_link": "https://example.com/file.pdf"
+    "key1": "value1",
+    "key2": "value2"
   }
 }</pre>
                                 <br/>
@@ -136,8 +147,8 @@ Content-Type: application/json
     template_id: <field name="id" readonly="1"/>,
     email: 'user@example.com',
     variables: {
-      name: 'John Doe',
-      download_link: 'https://example.com/file.pdf'
+      key1: 'value1',
+      key2: 'value2'
     }
   })
 })
@@ -151,8 +162,8 @@ Content-Type: application/json
     "template_id": <field name="id" readonly="1"/>,
     "email": "user@example.com",
     "variables": {
-      "name": "John Doe",
-      "download_link": "https://example.com/download"
+      "key1": "value1",
+      "key2": "value2"
     }
   }'</pre>
                             </div>

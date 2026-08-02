@@ -77,6 +77,12 @@ class MarketingTemplate(models.Model):
         help='Preview of rendered template with sample data'
     )
 
+    # Dynamic Variables
+    variable_keys = fields.Char(
+        string='Variable Keys',
+        help='Comma-separated variable names that this template expects, e.g.: name, role, amount'
+    )
+
     # Variables
     available_variables = fields.Text(
         string='Available Variables',
@@ -160,22 +166,29 @@ class MarketingTemplate(models.Model):
                     </div>
                 """
 
-    @api.depends('module_reference')
+    @api.depends('module_reference', 'variable_keys')
     def _compute_available_variables(self):
-        """Compute available variables based on module"""
+        """Compute available variables based on variable_keys and module"""
         for record in self:
             variables = []
 
+            # Show dynamic variables from variable_keys first
+            if record.variable_keys:
+                keys = [k.strip() for k in record.variable_keys.split(',') if k.strip()]
+                if keys:
+                    variables.append("# Template Variables:")
+                    for key in keys:
+                        variables.append(f"{{{{ {key} }}}} - {key}")
+
             # Common variables available in all templates
-            variables.append("# Common Variables:")
-            variables.append("{{ object }} - Main record object")
+            variables.append("\n# Common Variables (always available):")
             variables.append("{{ company.name }} - Company name")
             variables.append("{{ company.email }} - Company email")
             variables.append("{{ user.name }} - Current user name")
 
-            # Module-specific variables
+            # Legacy module-specific variables
             if record.module_reference == 'isd_profile_management':
-                variables.append("\n# Profile Management Variables:")
+                variables.append("\n# Profile Management Variables (legacy):")
                 variables.append("{{ object.name }} - Payment reference")
                 variables.append("{{ object.user_id.name }} - User name")
                 variables.append("{{ object.user_id.email }} - User email")
@@ -190,7 +203,7 @@ class MarketingTemplate(models.Model):
         """Get sample data for preview"""
         self.ensure_one()
 
-        # Create sample context
+        # Create sample context with common variables
         sample_data = {
             'object': {
                 'name': 'PAY00001',
@@ -208,6 +221,12 @@ class MarketingTemplate(models.Model):
                 'name': self.env.user.name,
             }
         }
+
+        # Add sample values for dynamic variable_keys
+        if self.variable_keys:
+            keys = [k.strip() for k in self.variable_keys.split(',') if k.strip()]
+            for key in keys:
+                sample_data[key] = f'[{key}]'
 
         return sample_data
 
@@ -337,7 +356,7 @@ class MarketingTemplate(models.Model):
 
         Args:
             recipient_email (str): Recipient email address
-            variables (dict): Variables to render in template
+            variables (dict): Flat variables to render in template, e.g. {"name": "John", "role": "Student"}
 
         Returns:
             dict: Result with success status
@@ -350,12 +369,23 @@ class MarketingTemplate(models.Model):
         if not variables:
             variables = {}
 
-        # Add recipient to variables
-        variables.setdefault('recipient', {'email': recipient_email})
+        # Build render context: common data + flat user variables
+        render_data = {
+            'company': {
+                'name': self.env.company.name,
+                'email': self.env.company.email or 'info@company.com',
+            },
+            'user': {
+                'name': self.env.user.name,
+            },
+            'recipient': {'email': recipient_email},
+        }
+        # Merge flat variables directly into render context
+        render_data.update(variables)
 
         # Render template and subject
-        rendered_content = self.render_template(variables)
-        rendered_subject = self.render_subject(variables)
+        rendered_content = self.render_template(render_data)
+        rendered_subject = self.render_subject(render_data)
 
         # Send email
         mail_values = {
