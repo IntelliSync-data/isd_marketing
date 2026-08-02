@@ -13,7 +13,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       
-    - name: Deploy OpenEducCat to Server
+    - name: Deploy isd_marketing to Server
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.VFO_HOST }}
@@ -34,7 +34,7 @@ jobs:
           sudo mkdir -p /opt/custom-addons/isd_marketing
           sudo rsync -av --delete ~/addons-system/isd_marketing/ /opt/custom-addons/isd_marketing/
 
-    - name: Update isd_payment Module
+    - name: Update isd_marketing Module
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.VFO_HOST }}
