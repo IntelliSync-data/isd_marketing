@@ -44,8 +44,12 @@ jobs:
         username: ${{ secrets.BLOOMPOD_USERNAME }}
         key: ${{ secrets.BLOOMPOD_SSH_KEY }}
         script: |
-          echo "Updating apps list..."
-          echo "env['ir.module.module'].update_list(); env.cr.commit()" | sudo -u odoo /opt/odoo-venv/bin/python /opt/odoo18/odoo-bin shell -c /etc/odoo/odoo.conf -d ${{ secrets.BLOOMPOD_DB_NAME }} --no-http
+           echo "Updating apps list..."
+            echo "env['ir.module.module'].update_list(); env.cr.commit()" | sudo -u ubuntu /odoo-venv/bin/python /odoo18/odoo-bin shell -c /odoo.conf -d ${{ secrets.BLOOMPOD_DB_NAME }} --no-http
+            echo "Updating isd_marketing module..."
+            sudo -u ubuntu /odoo-venv/bin/python /odoo18/odoo-bin -c /odoo.conf -d ${{ secrets.BLOOMPOD_DB_NAME }} -u isd_marketing --stop-after-init --no-http || \
+              echo "Module not installed yet (now visible in Apps list), continuing..."
+
 
     - name: Restart Odoo Service
       uses: appleboy/ssh-action@master
