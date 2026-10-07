@@ -49,9 +49,7 @@
           key: ${{ secrets.EHUB_SSH_KEY }}
           script: |
             echo "Updating apps list..."
-            echo "env['ir.module.module'].update_list(); env.cr.commit()" 
-            | sudo -u odoo /opt/odoo-venv/bin/python /opt/odoo18/odoo-bin 
-            shell -c /etc/odoo/odoo.conf -d ${{ secrets.EHUB_DB_NAME }} --no-http
+            echo "env['ir.module.module'].update_list(); env.cr.commit()" | sudo -u odoo /opt/odoo-venv/bin/python /opt/odoo18/odoo-bin shell -c /etc/odoo/odoo.conf -d ${{ secrets.EHUB_DB_NAME }} --no-http
             if [ $? -ne 0 ]; then
               echo "update_list() FAILED"
               exit 1
