@@ -56,9 +56,7 @@
             fi
 
             echo "Updating isd_marketing module..."
-            sudo -u odoo /opt/odoo-venv/bin/python /opt/odoo18/odoo-bin 
-            -c /etc/odoo/odoo.conf -d ${{ secrets.EHUB_DB_NAME }} 
-            -u isd_marketing,isd_marketing_template --stop-after-init --no-http
+            sudo -u odoo /opt/odoo-venv/bin/python /opt/odoo18/odoo-bin -c /etc/odoo/odoo.conf -d ${{ secrets.EHUB_DB_NAME }} -u isd_marketing,isd_marketing_template --stop-after-init --no-http
             if [ $? -ne 0 ]; then
               echo "Module update FAILED"
               exit 1
