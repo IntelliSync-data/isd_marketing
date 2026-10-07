@@ -34,11 +34,11 @@
 
             # Sync isd_marketing directory with rsync (including deletion) 
             for mod in isd_marketing isd_marketing_template; do
-              sudo mkdir -p /opt/custome-addons/$mod
+              sudo mkdir -p /opt/custom-addons/$mod
               sudo rsync -av --delete \
                 --exclude='views/menu_items_override.xml.*' \
                 --exclude='__manifest__.py.*' \
-                /opt/addons-system/isd_marketing/$mod /opt/custom-addons/$mod/
+                /opt/addons-system/isd_marketing/$mod/ /opt/custom-addons/$mod/
             done
 
       - name: Update isd_marketing Module
