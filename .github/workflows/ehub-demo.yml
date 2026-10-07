@@ -32,12 +32,14 @@
               sudo -u odoo bash -c "cd /opt/addons-system/isd_marketing && git fetch origin && git reset --hard origin/ehub" 
             fi
 
-            # Sync isd_marketing directory with rsync (including deletions)
-            sudo mkdir -p /opt/custom-addons/isd_marketing
-            sudo rsync -av --delete \
-              --exclude='views/menu_items_override.xml.*' \
-              --exclude='__manifest__.py.*' \
-              /opt/addons-system/isd_marketing/ /opt/custom-addons/isd_marketing/
+            # Sync isd_marketing directory with rsync (including deletion) 
+            for mod in isd_marketing isd_marketing_template; do
+              sudo mkdir -p /opt/custome-addons/$mod
+              sudo rsync -av --delete \
+                --exclude='views/menu_items_override.xml.*' \
+                --exclude='__manifest__.py.*' \
+                /opt/addons-system/isd_marketing/$mod /opt/custom-addons/$mod/
+            done
 
       - name: Update isd_marketing Module
         uses: appleboy/ssh-action@master
@@ -47,14 +49,18 @@
           key: ${{ secrets.EHUB_SSH_KEY }}
           script: |
             echo "Updating apps list..."
-            echo "env['ir.module.module'].update_list(); env.cr.commit()" | sudo -u odoo /opt/odoo-venv/bin/python /opt/odoo18/odoo-bin shell -c /etc/odoo/odoo.conf -d ${{ secrets.EHUB_DB_NAME }} --no-http
+            echo "env['ir.module.module'].update_list(); env.cr.commit()" 
+            | sudo -u odoo /opt/odoo-venv/bin/python /opt/odoo18/odoo-bin 
+            shell -c /etc/odoo/odoo.conf -d ${{ secrets.EHUB_DB_NAME }} --no-http
             if [ $? -ne 0 ]; then
               echo "update_list() FAILED"
               exit 1
             fi
 
             echo "Updating isd_marketing module..."
-            sudo -u odoo /opt/odoo-venv/bin/python /opt/odoo18/odoo-bin -c /etc/odoo/odoo.conf -d ${{ secrets.EHUB_DB_NAME }} -u isd_marketing --stop-after-init --no-http
+            sudo -u odoo /opt/odoo-venv/bin/python /opt/odoo18/odoo-bin 
+            -c /etc/odoo/odoo.conf -d ${{ secrets.EHUB_DB_NAME }} 
+            -u isd_marketing,isd_marketing_template --stop-after-init --no-http
             if [ $? -ne 0 ]; then
               echo "Module update FAILED"
               exit 1
