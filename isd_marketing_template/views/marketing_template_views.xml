@@ -107,6 +107,28 @@
                                 <i class="fa fa-lightbulb-o"/> <strong>Tip:</strong> Use these variables in your template content and subject line.
                             </div>
                             <field name="available_variables" widget="text" readonly="1" nolabel="1"/>
+
+                            <div class="alert alert-warning mt-3" role="alert">
+                                <h4><i class="fa fa-clock-o"/> Dates read as UTC unless you say otherwise</h4>
+                                <p>
+                                    Odoo stores every date in UTC, so printing one straight into an
+                                    email shows the wrong hour to whoever opens it. Put
+                                    <code>|tz</code> after it:
+                                </p>
+                                <pre>{{ assigned_date }}      <span class="text-muted">&#8594; 2026-10-11 14:30:00  (UTC)</span>
+{{ assigned_date|tz }}   <span class="text-muted">&#8594; 11/10/2026 21:30</span></pre>
+                                <p>
+                                    Bare <code>|tz</code> assumes Vietnam. Name the timezone the
+                                    email is read in, and a format if the default does not suit:
+                                </p>
+                                <pre>{{ payment_date|tz('America/New_York') }}
+{{ payment_date|tz('Asia/Ho_Chi_Minh', '%H:%M %d-%m-%Y') }}</pre>
+                                <p>
+                                    Anything that is not a UTC datetime comes back untouched &#8212;
+                                    a bare date, a name, an amount &#8212; so it is safe to reach for
+                                    whenever a value looks like a date.
+                                </p>
+                            </div>
                         </page>
 
                         <!-- Notes Tab -->

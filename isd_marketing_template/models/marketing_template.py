@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import logging
-from jinja2 import Template, TemplateSyntaxError
+import pytz
+from datetime import date, datetime
+from jinja2 import Environment, TemplateSyntaxError
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
@@ -230,6 +232,70 @@ class MarketingTemplate(models.Model):
 
         return sample_data
 
+    # Odoo keeps every datetime in UTC, so a value handed straight to a
+    # template reads as UTC to whoever opens the email. DEFAULT_TIMEZONE is
+    # where a template that names none is assumed to be read.
+    DEFAULT_TIMEZONE = 'Asia/Ho_Chi_Minh'
+    DEFAULT_DATETIME_FORMAT = '%d/%m/%Y %H:%M'
+
+    def _default_timezone(self):
+        """Whose clock a date is read on when the template does not say.
+
+        A template that cares names its own timezone, which is the honest
+        answer and the one to prefer. Nothing here can work it out: an email
+        sent from the public API runs as the public user, who has no timezone,
+        and one sent from the back office would otherwise be read on the clock
+        of whichever member of staff pressed the button. render_tz is for a
+        sender that does know the recipient.
+        """
+        return (
+            self.env.context.get('render_tz')
+            or self.env.user.tz
+            or self.DEFAULT_TIMEZONE
+        )
+
+    def _filter_tz(self, value, timezone=None, fmt=None):
+        """Read a UTC value in local time: {{ assigned_date|tz }}
+
+        Anything it does not recognise as a UTC datetime comes back untouched -
+        a bare date, an empty value, a word. That is deliberate: the filter is
+        meant to be safe to reach for whenever a value looks like a date,
+        without having to know where it came from. A bare date has no time to
+        convert and would only be shifted a day, so it is left alone.
+
+        Name the timezone the email is read in, and a format if the default
+        does not suit:
+            {{ payment_date|tz('America/New_York') }}
+            {{ payment_date|tz('Asia/Ho_Chi_Minh', '%H:%M %d-%m-%Y') }}
+        """
+        fmt = fmt or self.DEFAULT_DATETIME_FORMAT
+
+        if isinstance(value, datetime):
+            moment = value
+        elif isinstance(value, date):
+            return value
+        else:
+            try:
+                moment = datetime.strptime(str(value).strip(), '%Y-%m-%d %H:%M:%S')
+            except (ValueError, TypeError, AttributeError):
+                return value
+
+        try:
+            zone = pytz.timezone(timezone or self._default_timezone())
+        except pytz.UnknownTimeZoneError:
+            _logger.warning("Unknown timezone %r in a template filter", timezone)
+            zone = pytz.timezone(self.DEFAULT_TIMEZONE)
+
+        if moment.tzinfo is None:
+            moment = pytz.utc.localize(moment)
+        return moment.astimezone(zone).strftime(fmt)
+
+    def _jinja_env(self):
+        """The Jinja environment every render goes through, filters included."""
+        env = Environment()
+        env.filters['tz'] = self._filter_tz
+        return env
+
     def render_template(self, data):
         """Render template with given data using Jinja2
 
@@ -251,8 +317,7 @@ class MarketingTemplate(models.Model):
 
         try:
             # Render using Jinja2
-            template = Template(content)
-            rendered = template.render(**data)
+            rendered = self._jinja_env().from_string(content).render(**data)
             return rendered
         except TemplateSyntaxError as e:
             raise ValidationError(_(f"Template syntax error: {str(e)}"))
@@ -274,8 +339,7 @@ class MarketingTemplate(models.Model):
             return ''
 
         try:
-            template = Template(self.subject)
-            rendered = template.render(**data)
+            rendered = self._jinja_env().from_string(self.subject).render(**data)
             return rendered
         except Exception as e:
             _logger.warning(f"Error rendering subject for template {self.name}: {e}")
