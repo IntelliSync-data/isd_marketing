@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_usa_steps" name="USA Program - How It Works">
+        <section id="how" class="s_usa_steps oe_snippet_body" data-snippet="s_usa_steps" data-name="How It Works">
+            <div class="usa-theme-wrap">
+                <div class="usa-eyebrow">How It Works</div>
+                <h2 class="usa-section-title">Find the Right Next Step</h2>
+                <p class="usa-section-intro">
+                    Start with your educational goals. Program requirements, timelines, and services vary by course and university.
+                </p>
+
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-num">1</div>
+                        <h3>Explore Programs</h3>
+                        <p>Compare online learning, dual diplomas, and university pathway options.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">2</div>
+                        <h3>Share Your Goals</h3>
+                        <p>Tell us about your interests, academic history, and intended study path.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">3</div>
+                        <h3>Get Guidance</h3>
+                        <p>Ask experienced counselors about program fit, eligibility, and timelines.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">4</div>
+                        <h3>Prepare</h3>
+                        <p>Receive comprehensive checklists for required documents and admission tests.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">5</div>
+                        <h3>Move Forward</h3>
+                        <p>Follow the enrollment steps and commence your U.S. academic journey.</p>
+                    </div>
+                </div>
+
+                <div class="cta-band">
+                    <div>
+                        <h3>Not sure which option fits your goals?</h3>
+                        <p>Send an inquiry and ask the USA Program expert team about tailored options.</p>
+                    </div>
+                    <button class="btn-usa-primary" data-usa-open="guidance">Get Personalized Guidance →</button>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

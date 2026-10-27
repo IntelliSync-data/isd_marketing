@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_usa_partner_cta" name="USA Program - Partner With Us">
+        <section id="partner-with-us" class="s_usa_partner_cta oe_snippet_body" data-snippet="s_usa_partner_cta" data-name="Partner With Us">
+            <div class="usa-theme-wrap">
+                <div class="global-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: center;">
+                    <div>
+                        <div class="usa-eyebrow">For Agencies &amp; Organizations</div>
+                        <h2 class="usa-section-title">Explore a Partnership With USA Program</h2>
+                        <p class="usa-section-intro">
+                            Are you an education agency, high school, or institutional counselor interested in student exchange and dual-diploma offerings? Join our expanding global network.
+                        </p>
+                        <div style="margin-top: 25px;">
+                            <button class="btn-usa-primary" data-usa-open="partner">Submit Partnership Interest →</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="support-card">
+                            <div class="usa-eyebrow">Institutional Collaboration</div>
+                            <h3>Start a Conversation</h3>
+                            <p>
+                                Expand your service portfolio with accredited U.S. high school dual diplomas, English preparatory courses, and university admissions pathways.
+                            </p>
+                            <ul>
+                                <li>Direct institution-to-institution agreements</li>
+                                <li>Attractive partner commission &amp; institutional rates</li>
+                                <li>Comprehensive advisor training &amp; marketing collateral</li>
+                                <li>Dedicated partner portal &amp; application tracker</li>
+                            </ul>
+                            <div style="margin-top: 18px;">
+                                <button class="btn-usa-outline" data-usa-open="partner">Explore Partnership Details →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_usa_about" name="USA Program - About Us">
+        <section id="about" class="s_usa_about oe_snippet_body" data-snippet="s_usa_about" data-name="About Us">
+            <div class="usa-theme-wrap">
+                <div class="usa-eyebrow">About USA Program</div>
+                <h2 class="usa-section-title">Education Without Borders</h2>
+                <p class="usa-section-intro">
+                    USA Program is an international educational organization founded in 1995. In 2021, USA Program launched I Can Do It Academy to bring interactive, accredited digital learning opportunities to global students.
+                </p>
+
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="symbol-badge">1995</div>
+                        <div>
+                            <h3>Established</h3>
+                            <p>Over 30 years of dedicated experience in international student exchange and education.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="symbol-badge">◎</div>
+                        <div>
+                            <h3>Digital Learning</h3>
+                            <p>I Can Do It Academy delivers state-of-the-art virtual high school and pathway curriculum.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="symbol-badge">⌁</div>
+                        <div>
+                            <h3>International Focus</h3>
+                            <p>Designed specifically to prepare non-native students for the American education environment.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="symbol-badge">✦</div>
+                        <div>
+                            <h3>Student Support</h3>
+                            <p>Dedicated advisors guiding academic milestones, language readiness, and visa processes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="compliance-note">
+                    * School registration and compliance credentials verified under USA Program &amp; I Can Do It Academy standards.
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Put the blocks in the Website Builder panel.
+
+         Odoo 18 moved this: the panel is a <snippets> element, not a div with
+         an o_panel_body inside, and every structure block names the group it
+         belongs to. A block without a group has nowhere to appear. -->
+    <template id="snippets" inherit_id="website.snippets" priority="8">
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+
+            <t t-snippet="isd_theme_usa_program.s_usa_hero" string="USA Hero Banner" group="intro"
+               t-thumbnail="/isd_theme_usa_program/static/description/icon.png">
+                <keywords>hero, banner, usa, education, study abroad, headline</keywords>
+            </t>
+
+            <t t-snippet="isd_theme_usa_program.s_usa_programs" string="USA Programs" group="columns"
+               t-thumbnail="/isd_theme_usa_program/static/description/icon.png">
+                <keywords>programs, courses, study, catalog, usa</keywords>
+            </t>
+
+            <t t-snippet="isd_theme_usa_program.s_usa_steps" string="USA How It Works" group="content"
+               t-thumbnail="/isd_theme_usa_program/static/description/icon.png">
+                <keywords>steps, process, how it works, timeline, journey</keywords>
+            </t>
+
+            <t t-snippet="isd_theme_usa_program.s_usa_university" string="USA University Placement" group="content"
+               t-thumbnail="/isd_theme_usa_program/static/description/icon.png">
+                <keywords>university, placement, admission, support, college</keywords>
+            </t>
+
+            <t t-snippet="isd_theme_usa_program.s_usa_about" string="USA About Us" group="content"
+               t-thumbnail="/isd_theme_usa_program/static/description/icon.png">
+                <keywords>about, history, company, story, strengths</keywords>
+            </t>
+
+            <t t-snippet="isd_theme_usa_program.s_usa_quote" string="USA Quote Banner" group="text"
+               t-thumbnail="/isd_theme_usa_program/static/description/icon.png">
+                <keywords>quote, testimonial, banner, saying</keywords>
+            </t>
+
+            <t t-snippet="isd_theme_usa_program.s_usa_partners" string="USA Partner Network" group="people"
+               t-thumbnail="/isd_theme_usa_program/static/description/icon.png">
+                <keywords>partners, network, global, agents, schools</keywords>
+            </t>
+
+            <t t-snippet="isd_theme_usa_program.s_usa_partner_cta" string="USA Partner With Us" group="contact_and_forms"
+               t-thumbnail="/isd_theme_usa_program/static/description/icon.png">
+                <keywords>partner, cta, join, agency, call to action</keywords>
+            </t>
+
+        </xpath>
+    </template>
+</odoo>

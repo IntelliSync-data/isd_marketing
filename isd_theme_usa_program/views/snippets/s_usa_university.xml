@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_usa_university" name="USA Program - University Placement">
+        <section id="university" class="s_usa_university oe_snippet_body" data-snippet="s_usa_university" data-name="University Placement">
+            <div class="usa-theme-wrap">
+                <div class="global-layout">
+                    <div>
+                        <div class="usa-eyebrow">American University Placement Program</div>
+                        <h2 class="usa-section-title">Plan Your Path to a U.S. University</h2>
+                        <p class="usa-section-intro">
+                            USA Program provides specialized guidance encompassing school research, admissions evaluation, timeline tracking, visa interview coaching, pre-arrival planning, and academic mentorship.
+                        </p>
+                        <div class="stat-points">
+                            <div class="stat-col">
+                                <strong>100+</strong>
+                                <small>Partner universities across America</small>
+                            </div>
+                            <div class="stat-col">
+                                <strong>36</strong>
+                                <small>U.S. states represented in the network</small>
+                            </div>
+                        </div>
+                        <button class="btn-usa-primary" data-usa-open="guidance" data-usa-interest="American University Placement">
+                            Ask About University Placement →
+                        </button>
+                    </div>
+
+                    <div>
+                        <div class="support-card">
+                            <div class="usa-eyebrow">Support 4 Success</div>
+                            <h3>Support Across Key Stages</h3>
+                            <p>
+                                A structured framework covering every transition: from school matching and acceptance to arrival, housing, campus onboarding, and career readiness.
+                            </p>
+                            <ul>
+                                <li>Research and tailored school matching</li>
+                                <li>Application dossier review and deadline control</li>
+                                <li>F-1 Visa interview coaching and embassy checklist</li>
+                                <li>Pre-departure orientation &amp; on-campus academic support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>
