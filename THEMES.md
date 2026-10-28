@@ -171,7 +171,7 @@ width: min(1180px, 92%);        /* SAI */
 
 Mỗi website chỉ chạy một theme, nên hai theme khác nhau không bao giờ đụng nhau. Nhưng **không được** chạy theme cùng một module thường chứa cùng script trên một website: script gắn sự kiện thẳng lên `document` và tìm phần tử theo id, hai bản là mọi cú click xử lý hai lần.
 
-Ví dụ: `isd_theme_usa_program` (bản module thường, vẫn để trong repo) phải được **gỡ** trước khi chọn `theme_usa_program`.
+Ví dụ: trước khi có `theme_usa_program` từng có bản module thường `isd_theme_usa_program` chứa cùng script — phải gỡ nó ra thì theme mới chạy đúng. Bản đó đã xoá khỏi repo.
 
 ---
 
