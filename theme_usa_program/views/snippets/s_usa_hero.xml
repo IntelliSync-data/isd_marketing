@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_usa_hero" name="USA Program - Hero Banner">
+        <section class="s_usa_hero" data-snippet="s_usa_hero" data-name="Hero Banner">
+            <div class="usa-theme-wrap">
+                <div class="hero-inner" style="max-width: 650px;">
+                    <div class="usa-eyebrow">Education Without Borders</div>
+                    <h1>Discover Your Path to Education in the United States</h1>
+                    <p class="hero-desc">
+                        Explore online learning programs, prepare for top university admissions, and unlock prestigious educational opportunities designed for international learners.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#programs" class="btn-usa-primary">Explore Programs →</a>
+                        <button class="btn-usa-secondary" data-usa-open="guidance">Get Personalized Guidance</button>
+                    </div>
+                    <div class="hero-proof">
+                        <span><b>◇</b> International Education</span>
+                        <span><b>◎</b> Flexible Digital Learning</span>
+                        <span><b>✧</b> Comprehensive Student Support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

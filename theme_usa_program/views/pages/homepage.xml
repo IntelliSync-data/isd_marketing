@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The home page the theme arrives with.
+
+         The blocks are written out in full rather than t-called. A t-call
+         renders the same page, but the Website Builder cannot edit through
+         one, so the page would look right and refuse to be changed. Written
+         out, this becomes the website's own copy of the home page when the
+         theme is applied, and is edited like any other.
+
+         Generated from views/snippets/*.xml when the theme was made. The two
+         are expected to drift: the snippets are what can be dropped, this is
+         what was dropped. Changing a snippet does not, and should not, rewrite
+         a home page someone has since edited. -->
+    <template id="homepage" inherit_id="website.homepage" name="USA Program Home">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div id="wrap" class="oe_structure">
+<section class="s_usa_hero" data-snippet="s_usa_hero" data-name="Hero Banner">
+            <div class="usa-theme-wrap">
+                <div class="hero-inner" style="max-width: 650px;">
+                    <div class="usa-eyebrow">Education Without Borders</div>
+                    <h1>Discover Your Path to Education in the United States</h1>
+                    <p class="hero-desc">
+                        Explore online learning programs, prepare for top university admissions, and unlock prestigious educational opportunities designed for international learners.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#programs" class="btn-usa-primary">Explore Programs →</a>
+                        <button class="btn-usa-secondary" data-usa-open="guidance">Get Personalized Guidance</button>
+                    </div>
+                    <div class="hero-proof">
+                        <span><b>◇</b> International Education</span>
+                        <span><b>◎</b> Flexible Digital Learning</span>
+                        <span><b>✧</b> Comprehensive Student Support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="programs" class="s_usa_programs" data-snippet="s_usa_programs" data-name="Education Programs">
+            <div class="usa-theme-wrap">
+                <div class="program-head">
+                    <div>
+                        <div class="usa-eyebrow">I Can Do It Academy &amp; USA Program</div>
+                        <h2 class="usa-section-title">Explore Our Education Programs</h2>
+                        <p class="usa-section-intro">
+                            Explore academic courses, English learning, career preparation, and support for students planning to study at a U.S. university.
+                        </p>
+                    </div>
+                    <a href="#programs" class="usa-text-link">View All Programs →</a>
+                </div>
+
+                <div class="program-grid">
+                    <!-- Program 1 -->
+                    <article class="program-card">
+                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&amp;fit=crop&amp;w=700&amp;q=80')">
+                            <span class="icon-bubble">♧</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>High School Dual Diploma</h3>
+                            <p>Explore a U.S.-aligned high school curriculum and dual-diploma pathway.</p>
+                            <div class="card-meta">Online courses · Requirements apply</div>
+                            <button class="card-action" data-usa-program="0">Learn More →</button>
+                        </div>
+                    </article>
+
+                    <!-- Program 2 -->
+                    <article class="program-card">
+                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&amp;fit=crop&amp;w=700&amp;q=80')">
+                            <span class="icon-bubble">A</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Academic English</h3>
+                            <p>Build academic English skills while learning about American culture and customs.</p>
+                            <div class="card-meta">Digital course · Levels described in brochure</div>
+                            <button class="card-action" data-usa-program="1">Learn More →</button>
+                        </div>
+                    </article>
+
+                    <!-- Program 3 -->
+                    <article class="program-card">
+                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&amp;fit=crop&amp;w=700&amp;q=80')">
+                            <span class="icon-bubble">⌂</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Pathway Program</h3>
+                            <p>Prepare for academic study, career exploration, and university applications.</p>
+                            <div class="card-meta">Six-month program stated in brochure</div>
+                            <button class="card-action" data-usa-program="2">Learn More →</button>
+                        </div>
+                    </article>
+
+                    <!-- Program 4 -->
+                    <article class="program-card">
+                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=700&amp;q=80')">
+                            <span class="icon-bubble">▣</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>CTE Courses</h3>
+                            <p>Explore Career &amp; Technical Education courses related to U.S. industry certification.</p>
+                            <div class="card-meta">Course &amp; certification details vary</div>
+                            <button class="card-action" data-usa-program="3">Learn More →</button>
+                        </div>
+                    </article>
+
+                    <!-- Program 5 -->
+                    <article class="program-card">
+                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&amp;fit=crop&amp;w=700&amp;q=80')">
+                            <span class="icon-bubble">✈</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>American University Placement</h3>
+                            <p>Explore university options and support for application and enrollment.</p>
+                            <div class="card-meta">U.S. post-secondary education</div>
+                            <button class="card-action" data-usa-program="4">Learn More →</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+<section id="how" class="s_usa_steps" data-snippet="s_usa_steps" data-name="How It Works">
+            <div class="usa-theme-wrap">
+                <div class="usa-eyebrow">How It Works</div>
+                <h2 class="usa-section-title">Find the Right Next Step</h2>
+                <p class="usa-section-intro">
+                    Start with your educational goals. Program requirements, timelines, and services vary by course and university.
+                </p>
+
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-num">1</div>
+                        <h3>Explore Programs</h3>
+                        <p>Compare online learning, dual diplomas, and university pathway options.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">2</div>
+                        <h3>Share Your Goals</h3>
+                        <p>Tell us about your interests, academic history, and intended study path.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">3</div>
+                        <h3>Get Guidance</h3>
+                        <p>Ask experienced counselors about program fit, eligibility, and timelines.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">4</div>
+                        <h3>Prepare</h3>
+                        <p>Receive comprehensive checklists for required documents and admission tests.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">5</div>
+                        <h3>Move Forward</h3>
+                        <p>Follow the enrollment steps and commence your U.S. academic journey.</p>
+                    </div>
+                </div>
+
+                <div class="cta-band">
+                    <div>
+                        <h3>Not sure which option fits your goals?</h3>
+                        <p>Send an inquiry and ask the USA Program expert team about tailored options.</p>
+                    </div>
+                    <button class="btn-usa-primary" data-usa-open="guidance">Get Personalized Guidance →</button>
+                </div>
+            </div>
+        </section>
+
+<section id="university" class="s_usa_university" data-snippet="s_usa_university" data-name="University Placement">
+            <div class="usa-theme-wrap">
+                <div class="global-layout">
+                    <div>
+                        <div class="usa-eyebrow">American University Placement Program</div>
+                        <h2 class="usa-section-title">Plan Your Path to a U.S. University</h2>
+                        <p class="usa-section-intro">
+                            USA Program provides specialized guidance encompassing school research, admissions evaluation, timeline tracking, visa interview coaching, pre-arrival planning, and academic mentorship.
+                        </p>
+                        <div class="stat-points">
+                            <div class="stat-col">
+                                <strong>100+</strong>
+                                <small>Partner universities across America</small>
+                            </div>
+                            <div class="stat-col">
+                                <strong>36</strong>
+                                <small>U.S. states represented in the network</small>
+                            </div>
+                        </div>
+                        <button class="btn-usa-primary" data-usa-open="guidance" data-usa-interest="American University Placement">
+                            Ask About University Placement →
+                        </button>
+                    </div>
+
+                    <div>
+                        <div class="support-card">
+                            <div class="usa-eyebrow">Support 4 Success</div>
+                            <h3>Support Across Key Stages</h3>
+                            <p>
+                                A structured framework covering every transition: from school matching and acceptance to arrival, housing, campus onboarding, and career readiness.
+                            </p>
+                            <ul>
+                                <li>Research and tailored school matching</li>
+                                <li>Application dossier review and deadline control</li>
+                                <li>F-1 Visa interview coaching and embassy checklist</li>
+                                <li>Pre-departure orientation &amp; on-campus academic support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="about" class="s_usa_about" data-snippet="s_usa_about" data-name="About Us">
+            <div class="usa-theme-wrap">
+                <div class="usa-eyebrow">About USA Program</div>
+                <h2 class="usa-section-title">Education Without Borders</h2>
+                <p class="usa-section-intro">
+                    USA Program is an international educational organization founded in 1995. In 2021, USA Program launched I Can Do It Academy to bring interactive, accredited digital learning opportunities to global students.
+                </p>
+
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="symbol-badge">1995</div>
+                        <div>
+                            <h3>Established</h3>
+                            <p>Over 30 years of dedicated experience in international student exchange and education.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="symbol-badge">◎</div>
+                        <div>
+                            <h3>Digital Learning</h3>
+                            <p>I Can Do It Academy delivers state-of-the-art virtual high school and pathway curriculum.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="symbol-badge">⌁</div>
+                        <div>
+                            <h3>International Focus</h3>
+                            <p>Designed specifically to prepare non-native students for the American education environment.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="symbol-badge">✦</div>
+                        <div>
+                            <h3>Student Support</h3>
+                            <p>Dedicated advisors guiding academic milestones, language readiness, and visa processes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="compliance-note">
+                    * School registration and compliance credentials verified under USA Program &amp; I Can Do It Academy standards.
+                </div>
+            </div>
+        </section>
+
+<section class="s_usa_quote" data-snippet="s_usa_quote" data-name="Quote Banner">
+            <div class="usa-theme-wrap">
+                <div class="quote-wrap">
+                    <div>
+                        <blockquote>
+                            "Education Without Borders — explore your options, understand your pathway, and take your next step with confidence and personalized guidance."
+                        </blockquote>
+                        <small>USA Program Mission Statement</small>
+                    </div>
+                    <button class="btn-usa-secondary" data-usa-open="guidance">Ask About a Program →</button>
+                </div>
+            </div>
+        </section>
+
+<section id="partners" class="s_usa_partners" data-snippet="s_usa_partners" data-name="Partner Network">
+            <div class="usa-theme-wrap">
+                <div class="global-layout" style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 42px; align-items: center;">
+                    <div>
+                        <div class="usa-eyebrow">Global Partner Network</div>
+                        <h2 class="usa-section-title">Find Support in Your Region</h2>
+                        <p class="usa-section-intro">
+                            Connect with verified partner institutions, official local representatives, or our central student advising team for in-country support.
+                        </p>
+                        <div class="stat-points">
+                            <div class="stat-col">
+                                <strong>Global</strong>
+                                <small>Coverage across major regions</small>
+                            </div>
+                            <div class="stat-col">
+                                <strong>Verified</strong>
+                                <small>Authorized partner network</small>
+                            </div>
+                            <div class="stat-col">
+                                <strong>Direct</strong>
+                                <small>Central admissions hotline</small>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <button class="btn-usa-primary" data-usa-open="partners">Find a Partner →</button>
+                            <button class="btn-usa-outline" data-usa-open="guidance">Ask USA Program Directly</button>
+                        </div>
+                    </div>
+
+                    <div class="map-card-box">
+                        <div class="map-art-icon">🌐</div>
+                        <div class="map-tag tag-one">
+                            <strong>By Country</strong>
+                            <span>Find local authorized support</span>
+                        </div>
+                        <div class="map-tag tag-two">
+                            <strong>Approved Partners</strong>
+                            <span>Verified regional agencies</span>
+                        </div>
+                        <div class="map-tag tag-three">
+                            <strong>Need Immediate Help?</strong>
+                            <span>Consult central admissions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="partner-with-us" class="s_usa_partner_cta" data-snippet="s_usa_partner_cta" data-name="Partner With Us">
+            <div class="usa-theme-wrap">
+                <div class="global-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: center;">
+                    <div>
+                        <div class="usa-eyebrow">For Agencies &amp; Organizations</div>
+                        <h2 class="usa-section-title">Explore a Partnership With USA Program</h2>
+                        <p class="usa-section-intro">
+                            Are you an education agency, high school, or institutional counselor interested in student exchange and dual-diploma offerings? Join our expanding global network.
+                        </p>
+                        <div style="margin-top: 25px;">
+                            <button class="btn-usa-primary" data-usa-open="partner">Submit Partnership Interest →</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="support-card">
+                            <div class="usa-eyebrow">Institutional Collaboration</div>
+                            <h3>Start a Conversation</h3>
+                            <p>
+                                Expand your service portfolio with accredited U.S. high school dual diplomas, English preparatory courses, and university admissions pathways.
+                            </p>
+                            <ul>
+                                <li>Direct institution-to-institution agreements</li>
+                                <li>Attractive partner commission &amp; institutional rates</li>
+                                <li>Comprehensive advisor training &amp; marketing collateral</li>
+                                <li>Dedicated partner portal &amp; application tracker</li>
+                            </ul>
+                            <div style="margin-top: 18px;">
+                                <button class="btn-usa-outline" data-usa-open="partner">Explore Partnership Details →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

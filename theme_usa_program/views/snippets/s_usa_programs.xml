@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_usa_programs" name="USA Program - Education Programs">
+        <section id="programs" class="s_usa_programs" data-snippet="s_usa_programs" data-name="Education Programs">
+            <div class="usa-theme-wrap">
+                <div class="program-head">
+                    <div>
+                        <div class="usa-eyebrow">I Can Do It Academy &amp; USA Program</div>
+                        <h2 class="usa-section-title">Explore Our Education Programs</h2>
+                        <p class="usa-section-intro">
+                            Explore academic courses, English learning, career preparation, and support for students planning to study at a U.S. university.
+                        </p>
+                    </div>
+                    <a href="#programs" class="usa-text-link">View All Programs →</a>
+                </div>
+
+                <div class="program-grid">
+                    <!-- Program 1 -->
+                    <article class="program-card">
+                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&amp;fit=crop&amp;w=700&amp;q=80')">
+                            <span class="icon-bubble">♧</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>High School Dual Diploma</h3>
+                            <p>Explore a U.S.-aligned high school curriculum and dual-diploma pathway.</p>
+                            <div class="card-meta">Online courses · Requirements apply</div>
+                            <button class="card-action" data-usa-program="0">Learn More →</button>
+                        </div>
+                    </article>
+
+                    <!-- Program 2 -->
+                    <article class="program-card">
+                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&amp;fit=crop&amp;w=700&amp;q=80')">
+                            <span class="icon-bubble">A</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Academic English</h3>
+                            <p>Build academic English skills while learning about American culture and customs.</p>
+                            <div class="card-meta">Digital course · Levels described in brochure</div>
+                            <button class="card-action" data-usa-program="1">Learn More →</button>
+                        </div>
+                    </article>
+
+                    <!-- Program 3 -->
+                    <article class="program-card">
+                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&amp;fit=crop&amp;w=700&amp;q=80')">
+                            <span class="icon-bubble">⌂</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Pathway Program</h3>
+                            <p>Prepare for academic study, career exploration, and university applications.</p>
+                            <div class="card-meta">Six-month program stated in brochure</div>
+                            <button class="card-action" data-usa-program="2">Learn More →</button>
+                        </div>
+                    </article>
+
+                    <!-- Program 4 -->
+                    <article class="program-card">
+                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=700&amp;q=80')">
+                            <span class="icon-bubble">▣</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>CTE Courses</h3>
+                            <p>Explore Career &amp; Technical Education courses related to U.S. industry certification.</p>
+                            <div class="card-meta">Course &amp; certification details vary</div>
+                            <button class="card-action" data-usa-program="3">Learn More →</button>
+                        </div>
+                    </article>
+
+                    <!-- Program 5 -->
+                    <article class="program-card">
+                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&amp;fit=crop&amp;w=700&amp;q=80')">
+                            <span class="icon-bubble">✈</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>American University Placement</h3>
+                            <p>Explore university options and support for application and enrollment.</p>
+                            <div class="card-meta">U.S. post-secondary education</div>
+                            <button class="card-action" data-usa-program="4">Learn More →</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

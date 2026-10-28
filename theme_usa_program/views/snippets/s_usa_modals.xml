@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inject USA Program Modal Backdrop & Toast into Website Layout -->
+    <template id="usa_program_layout_modals" inherit_id="website.layout" name="USA Program Modal Container">
+        <xpath expr="//footer" position="after">
+            <!-- Modal Container -->
+            <div class="usa-modal-backdrop" id="usaModalBackdrop" role="dialog" aria-modal="true">
+                <div class="usa-modal-dialog">
+                    <button class="usa-modal-close" id="usaCloseModal" aria-label="Close">×</button>
+                    <div id="usaModalContent">
+                        <!-- Dynamic content injected by theme_usa_program.js -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toast notification -->
+            <div class="usa-toast-alert" id="usaToast">
+                Operation completed
+            </div>
+        </xpath>
+    </template>
+</odoo>

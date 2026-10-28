@@ -33,7 +33,7 @@
             fi
 
             # Sync isd_marketing directory with rsync (including deletion) 
-            for mod in isd_marketing isd_marketing_template isd_theme_usa_program; do
+            for mod in isd_marketing isd_marketing_template isd_theme_usa_program theme_usa_program; do
               sudo mkdir -p /opt/custom-addons/$mod
               sudo rsync -av --delete \
                 --exclude='views/menu_items_override.xml.*' \
@@ -56,7 +56,7 @@
             fi
 
             echo "Updating isd_marketing module..."
-            sudo -u odoo /opt/odoo-venv/bin/python /opt/odoo18/odoo-bin -c /etc/odoo/odoo.conf -d ${{ secrets.EHUB_DB_NAME }} -u isd_marketing,isd_marketing_template,isd_theme_usa_program --stop-after-init --no-http
+            sudo -u odoo /opt/odoo-venv/bin/python /opt/odoo18/odoo-bin -c /etc/odoo/odoo.conf -d ${{ secrets.EHUB_DB_NAME }} -u isd_marketing,isd_marketing_template,isd_theme_usa_program,theme_usa_program --stop-after-init --no-http
             if [ $? -ne 0 ]; then
               echo "Module update FAILED"
               exit 1
