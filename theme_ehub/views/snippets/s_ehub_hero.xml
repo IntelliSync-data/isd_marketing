@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_ehub_hero" name="USA Program - Hero Banner">
+        <section class="s_ehub_hero" data-snippet="s_ehub_hero" data-name="Hero Banner">
+            <div class="ehub-theme-wrap">
+                <div class="hero-inner" style="max-width: 650px;">
+                    <div class="ehub-eyebrow">Education Without Borders</div>
+                    <h1>Discover Your Path to Education in the United States</h1>
+                    <p class="hero-desc">
+                        Explore online learning programs, prepare for top university admissions, and unlock prestigious educational opportunities designed for international learners.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#programs" class="btn-ehub-primary">Explore Programs →</a>
+                        <button class="btn-ehub-secondary" data-ehub-open="guidance">Get Personalized Guidance</button>
+                    </div>
+                    <div class="hero-proof">
+                        <span><b>◇</b> International Education</span>
+                        <span><b>◎</b> Flexible Digital Learning</span>
+                        <span><b>✧</b> Comprehensive Student Support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

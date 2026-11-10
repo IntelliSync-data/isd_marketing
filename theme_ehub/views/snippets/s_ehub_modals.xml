@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inject USA Program Modal Backdrop & Toast into Website Layout -->
+    <template id="ehub_layout_modals" inherit_id="website.layout" name="USA Program Modal Container">
+        <xpath expr="//footer" position="after">
+            <!-- Modal Container -->
+            <div class="ehub-modal-backdrop" id="ehubModalBackdrop" role="dialog" aria-modal="true">
+                <div class="ehub-modal-dialog">
+                    <button class="ehub-modal-close" id="ehubCloseModal" aria-label="Close">×</button>
+                    <div id="ehubModalContent">
+                        <!-- Dynamic content injected by theme_ehub.js -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toast notification -->
+            <div class="ehub-toast-alert" id="ehubToast">
+                Operation completed
+            </div>
+        </xpath>
+    </template>
+</odoo>

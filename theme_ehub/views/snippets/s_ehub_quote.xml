@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_ehub_quote" name="USA Program - Quote Banner">
+        <section class="s_ehub_quote" data-snippet="s_ehub_quote" data-name="Quote Banner">
+            <div class="ehub-theme-wrap">
+                <div class="quote-wrap">
+                    <div>
+                        <blockquote>
+                            "Education Without Borders — explore your options, understand your pathway, and take your next step with confidence and personalized guidance."
+                        </blockquote>
+                        <small>USA Program Mission Statement</small>
+                    </div>
+                    <button class="btn-ehub-secondary" data-ehub-open="guidance">Ask About a Program →</button>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>
