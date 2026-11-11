@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The home page the theme arrives with.
+
+         The blocks are written out in full rather than t-called. A t-call
+         renders the same page, but the Website Builder cannot edit through
+         one, so the page would look right and refuse to be changed. Written
+         out, this becomes the website's own copy of the home page when the
+         theme is applied, and is edited like any other.
+
+         Generated from views/snippets/*.xml by tools/theme_tool.py. The two
+         are expected to drift: the snippets are what can be dropped, this is
+         what was dropped. Changing a snippet does not, and should not, rewrite
+         a home page someone has since edited. -->
+    <template id="homepage" inherit_id="website.homepage" name="Theme The IELTS Workshop Home">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div id="wrap" class="oe_structure">
+<section class="s_tiw_hero oe_snippet_body">
+            <img src="/theme_theieltsworkshop/static/src/img/test-trinh-do.jpg" class="hero-bg-img" alt="TIW Hero Background"/>
+            <div class="hero-bg-overlay"/>
+            <div class="container hero-slide">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="tiw-badge-tag bg-tiw-yellow text-tiw-dark mb-3">
+                            <span class="d-inline-block rounded-circle bg-danger" style="width: 6px; height: 6px;"/>
+                            Miễn Phí 100%
+                        </div>
+                        <h1 class="hero-title">KIỂM TRA TRÌNH ĐỘ MIỄN PHÍ</h1>
+                        <p class="hero-subtitle">Đánh giá chính xác 4 kỹ năng chuẩn đề thi quốc tế</p>
+                        <p class="text-white-50 fs-6 mb-4">
+                            Nhận kết quả và tư vấn lộ trình học cá nhân hóa trực tiếp từ đội ngũ chuyên gia The IELTS Workshop.
+                        </p>
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-6 hero-check-item">
+                                <i class="fa fa-check-circle"/>
+                                <span>Giáo viên 8.5 - 9.0 IELTS</span>
+                            </div>
+                            <div class="col-sm-6 hero-check-item">
+                                <i class="fa fa-check-circle"/>
+                                <span>Phương pháp L.I.M độc quyền</span>
+                            </div>
+                            <div class="col-sm-6 hero-check-item">
+                                <i class="fa fa-check-circle"/>
+                                <span>Chấm chữa bài chi tiết 1:1</span>
+                            </div>
+                            <div class="col-sm-6 hero-check-item">
+                                <i class="fa fa-check-circle"/>
+                                <span>Cam kết chuẩn đầu ra văn bản</span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="/#test-online" class="tiw-btn-primary">
+                                LÀM BÀI TEST NGAY <i class="fa fa-arrow-right"/>
+                            </a>
+                            <a href="/schedule" class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold">
+                                Xem Lịch Khai Giảng
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="why-tiw" class="py-5 bg-white oe_snippet_body">
+            <div class="container py-4">
+                <div class="text-center max-w-3xl mx-auto mb-5">
+                    <span class="tiw-badge-tag bg-warning bg-opacity-25 text-tiw-dark mb-2">Giá trị cốt lõi</span>
+                    <h2 class="display-6 fw-bold text-tiw-dark">TẠI SAO CHỌN <span class="text-tiw-orange">THE IELTS WORKSHOP?</span></h2>
+                    <div class="bg-warning mx-auto my-3 rounded" style="width: 60px; height: 4px;"/>
+                    <p class="text-muted">Hơn 8 năm phát triển, đồng hành cùng hơn 50.000 học viên chinh phục mục tiêu IELTS.</p>
+                </div>
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-column gap-4">
+                            <div class="p-4 bg-light rounded-4 border d-flex gap-4">
+                                <img src="/theme_theieltsworkshop/static/src/img/icon1.png" style="width: 48px; height: 48px;" alt="Icon"/>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Đội ngũ giảng viên giỏi chuyên môn</h5>
+                                    <p class="small text-muted mb-0">100% giáo viên tại TIW đều sở hữu 8.0 - 9.0 IELTS và chứng chỉ sư phạm quốc tế CELTA/TESOL.</p>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-light rounded-4 border d-flex gap-4">
+                                <img src="/theme_theieltsworkshop/static/src/img/icon4.png" style="width: 48px; height: 48px;" alt="Icon"/>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Chiến thuật học tập tinh gọn</h5>
+                                    <p class="small text-muted mb-0">Lộ trình học cô đọng, bám sát cấu trúc đề thi thực tế, không quá tải mà vẫn tối ưu hóa thời gian.</p>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-light rounded-4 border d-flex gap-4">
+                                <img src="/theme_theieltsworkshop/static/src/img/icon3.png" style="width: 48px; height: 48px;" alt="Icon"/>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Mô hình LEARN – INQUIRE – MASTER (L.I.M)</h5>
+                                    <p class="small text-muted mb-0">Phương pháp độc quyền kích thích tư duy ngôn ngữ chủ động, phản xạ tự nhiên.</p>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-light rounded-4 border d-flex gap-4">
+                                <img src="/theme_theieltsworkshop/static/src/img/icon2.png" style="width: 48px; height: 48px;" alt="Icon"/>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Môi trường tự chủ &amp; sáng tạo</h5>
+                                    <p class="small text-muted mb-0">Không gian hiện đại, phòng tự học Study Space mở và thư viện phong phú.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative">
+                            <div class="rounded-4 overflow-hidden shadow-lg border">
+                                <img src="/theme_theieltsworkshop/static/src/img/tung-1.jpg" alt="Thầy Đặng Trần Tùng" class="img-fluid w-100" style="max-height: 520px; object-fit: cover;"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="courses" class="s_tiw_courses oe_snippet_body">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="tiw-badge-tag bg-warning bg-opacity-25 text-tiw-dark mb-2">Lộ trình học bài bản</span>
+                    <h2 class="display-6 fw-bold text-tiw-dark">CHỌN KHÓA HỌC <span class="text-tiw-orange">PHÙ HỢP NHẤT VỚI BẠN</span></h2>
+                    <div class="bg-warning mx-auto my-3 rounded" style="width: 60px; height: 4px;"/>
+                    <p class="text-muted">Hệ thống phân chia rõ ràng theo từng trình độ đầu vào giúp bạn tiến bộ vượt bậc.</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="course-card">
+                            <div>
+                                <span class="badge bg-warning text-dark mb-3">Mất gốc tiếng Anh</span>
+                                <h4 class="fw-bold text-tiw-dark">Freshman (0 - 2.5)</h4>
+                                <p class="small text-muted">Xây dựng lại nền móng vững chắc, chuẩn hóa 44 âm ngữ âm IPA và 1.000 từ vựng cốt lõi.</p>
+                                <ul class="small text-muted ps-3 mb-4">
+                                    <li>Chuẩn hóa ngữ âm IPA</li>
+                                    <li>Nắm chắc 12 thì cơ bản</li>
+                                    <li>Thời lượng: 24 buổi (2 tháng)</li>
+                                </ul>
+                            </div>
+                            <a href="/#register" class="tiw-btn-primary btn-sm w-100 text-decoration-none">Đăng ký tư vấn</a>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="course-card">
+                            <div>
+                                <span class="badge bg-warning text-dark mb-3">Pre-IELTS</span>
+                                <h4 class="fw-bold text-tiw-dark">Sophomore (2.5 - 4.5)</h4>
+                                <p class="small text-muted">Làm quen cấu trúc 4 kỹ năng đề thi IELTS, rèn luyện kỹ năng Skimming, Scanning.</p>
+                                <ul class="small text-muted ps-3 mb-4">
+                                    <li>Format đề thi IELTS chuẩn</li>
+                                    <li>Keywords Listening Part 1-2</li>
+                                    <li>Thời lượng: 24 buổi (2 tháng)</li>
+                                </ul>
+                            </div>
+                            <a href="/#register" class="tiw-btn-primary btn-sm w-100 text-decoration-none">Đăng ký tư vấn</a>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="course-card border-warning">
+                            <div>
+                                <span class="badge bg-danger text-white mb-3">Phổ biến nhất</span>
+                                <h4 class="fw-bold text-tiw-dark">Junior (4.5 - 5.5)</h4>
+                                <p class="small text-muted">Phát triển tư duy phân tích đề bài, viết biểu đồ Task 1 và phản xạ Speaking Part 1 &amp; 2.</p>
+                                <ul class="small text-muted ps-3 mb-4">
+                                    <li>Chiến thuật xử lý mọi dạng đề</li>
+                                    <li>Chấm chữa bài chi tiết 1:1</li>
+                                    <li>Thời lượng: 28 buổi (2.5 tháng)</li>
+                                </ul>
+                            </div>
+                            <a href="/#register" class="tiw-btn-primary btn-sm w-100 text-decoration-none">Đăng ký tư vấn</a>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="course-card">
+                            <div>
+                                <span class="badge bg-dark text-warning mb-3">Về đích 7.5+</span>
+                                <h4 class="fw-bold text-tiw-dark">Senior &amp; Master</h4>
+                                <p class="small text-muted">Nâng cấp tư duy lập luận phản biện Part 3, làm chủ từ vựng C1-C2 Collocations &amp; Idioms.</p>
+                                <ul class="small text-muted ps-3 mb-4">
+                                    <li>Học cùng giáo viên 9.0</li>
+                                    <li>Luyện áp lực thi thật</li>
+                                    <li>Thời lượng: 32 buổi (3 tháng)</li>
+                                </ul>
+                            </div>
+                            <a href="/#register" class="tiw-btn-primary btn-sm w-100 text-decoration-none">Đăng ký tư vấn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="teachers" class="s_tiw_teachers oe_snippet_body">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="tiw-badge-tag bg-warning bg-opacity-25 text-tiw-dark mb-2">Đội ngũ tinh hoa</span>
+                    <h2 class="display-6 fw-bold text-tiw-dark">ĐỘI NGŨ <span class="text-tiw-orange">GIẢNG VIÊN 8.5 - 9.0 IELTS</span></h2>
+                    <div class="bg-warning mx-auto my-3 rounded" style="width: 60px; height: 4px;"/>
+                    <p class="text-muted">100% giáo viên tại TIW sở hữu chứng chỉ IELTS xuất sắc và bằng sư phạm quốc tế CELTA.</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Teacher 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="teacher-card">
+                            <div class="teacher-img-wrap">
+                                <img src="/theme_theieltsworkshop/static/src/img/tung-1.jpg" alt="Đặng Trần Tùng"/>
+                                <span class="teacher-score-badge"><i class="fa fa-trophy"/> 9.0 IELTS</span>
+                            </div>
+                            <div class="p-4">
+                                <h5 class="fw-bold teacher-name mb-1">Thầy Đặng Trần Tùng</h5>
+                                <p class="small text-tiw-orange fw-bold mb-2">Nhà sáng lập The IELTS Workshop</p>
+                                <p class="small text-muted mb-0">Người đầu tiên 5 lần đạt 9.0 IELTS tại Việt Nam. Cố vấn học thuật cho nhiều chương trình của VTV.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="teacher-card">
+                            <div class="teacher-img-wrap">
+                                <img src="/theme_theieltsworkshop/static/src/img/Vu-Duc-Long.jpg" alt="Vũ Đức Long"/>
+                                <span class="teacher-score-badge"><i class="fa fa-trophy"/> 9.0 IELTS</span>
+                            </div>
+                            <div class="p-4">
+                                <h5 class="fw-bold teacher-name mb-1">Thầy Vũ Đức Long</h5>
+                                <p class="small text-tiw-orange fw-bold mb-2">Chuyên gia đào tạo IELTS cao cấp</p>
+                                <p class="small text-muted mb-0">9.0 Reading &amp; Listening, 8.5 Writing &amp; Speaking. Chứng chỉ quốc tế CELTA hạng Pass A.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="teacher-card">
+                            <div class="teacher-img-wrap">
+                                <img src="/theme_theieltsworkshop/static/src/img/Mai-Son-Tung-2-1.jpg" alt="Mai Sơn Tùng"/>
+                                <span class="teacher-score-badge"><i class="fa fa-trophy"/> 8.5 IELTS</span>
+                            </div>
+                            <div class="p-4">
+                                <h5 class="fw-bold teacher-name mb-1">Thầy Mai Sơn Tùng</h5>
+                                <p class="small text-tiw-orange fw-bold mb-2">Giảng viên IELTS Chuyên sâu</p>
+                                <p class="small text-muted mb-0">Cử nhân Sư phạm Tiếng Anh ĐHQGHN, truyền cảm hứng xóa bỏ rào cản phát âm cho học viên.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="test-online" class="s_tiw_mini_test oe_snippet_body">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <span class="tiw-badge-tag bg-warning bg-opacity-25 text-tiw-dark mb-2">Trải nghiệm tức thì</span>
+                    <h2 class="display-6 fw-bold text-tiw-dark">MINI TEST <span class="text-tiw-orange">ĐÁNH GIÁ TRÌNH ĐỘ NHANH</span></h2>
+                    <div class="bg-warning mx-auto my-3 rounded" style="width: 60px; height: 4px;"/>
+                    <p class="text-muted">Thử sức nhanh với 4 câu hỏi ngữ pháp &amp; từ vựng để ước lượng sơ bộ band điểm của bạn.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="mini-test-box">
+                            <!-- Active View -->
+                            <div class="mini-test-active-view">
+                                <div class="d-flex justify-content-between small fw-bold text-muted mb-2">
+                                    <span class="mini-test-step">Câu hỏi 1 / 4</span>
+                                    <span>Tiến độ</span>
+                                </div>
+                                <div class="progress mb-4" style="height: 8px;">
+                                    <div class="progress-bar bg-warning mini-test-progress" role="progressbar" style="width: 25%;"/>
+                                </div>
+                                <h4 class="fw-bold text-tiw-dark mini-test-question-text mb-4">
+                                    Đang tải câu hỏi...
+                                </h4>
+                                <div class="mini-test-options mb-4">
+                                    <!-- Dynamic options inserted by JS -->
+                                </div>
+                                <div class="d-flex justify-content-between pt-3 border-top">
+                                    <button type="button" class="btn btn-light rounded-pill px-4 btn-prev-question" disabled="disabled">Quay lại</button>
+                                    <button type="button" class="tiw-btn-primary btn-sm btn-next-question">Câu Tiếp Theo</button>
+                                </div>
+                            </div>
+                            <!-- Result View -->
+                            <div class="mini-test-result-view d-none text-center py-4">
+                                <div class="rounded-circle bg-warning bg-opacity-25 d-inline-flex p-3 text-tiw-orange mb-3">
+                                    <i class="fa fa-trophy fs-1"/>
+                                </div>
+                                <h3 class="fw-bold mb-2">KẾT QUẢ MINI TEST CỦA BẠN</h3>
+                                <p class="text-muted mb-3">Bạn trả lời đúng: <strong class="text-tiw-orange fs-4 result-score">4/4</strong> câu</p>
+                                <div class="bg-white p-4 rounded-4 border mx-auto mb-4" style="max-width: 450px;">
+                                    <span class="text-uppercase small fw-bold text-muted d-block mb-1">Đánh giá sơ bộ:</span>
+                                    <h5 class="fw-bold text-tiw-orange mb-2 result-band">Band 7.0 - 8.0 (Nâng cao)</h5>
+                                    <p class="small text-muted mb-0">Đăng ký thông tin bên dưới để được kiểm tra 4 kỹ năng đầy đủ cùng giáo viên.</p>
+                                </div>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <a href="/#register" class="tiw-btn-primary text-decoration-none">Đăng Ký Test 4 Kỹ Năng Đầy Đủ</a>
+                                    <button type="button" class="btn btn-outline-secondary rounded-pill px-4 btn-restart-test"><i class="fa fa-refresh me-1"/> Làm lại</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="register" class="s_tiw_registration oe_snippet_body">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-7">
+                        <span class="tiw-badge-tag bg-tiw-orange mb-3"><i class="fa fa-gift"/> Ưu Đãi Tuyển Sinh</span>
+                        <h2 class="display-5 fw-bold mb-3">ĐĂNG KÝ NHẬN <span class="text-tiw-yellow">LỘ TRÌNH MIỄN PHÍ</span> &amp; TEST ĐẦU VÀO</h2>
+                        <p class="lead text-white-50 mb-4">
+                            Hãy để chuyên gia học thuật của The IELTS Workshop giúp bạn phân tích điểm mạnh, điểm yếu và xây dựng kế hoạch học tập tối ưu nhất!
+                        </p>
+                        <div class="d-flex flex-column gap-3 mb-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="badge bg-warning text-dark rounded-circle p-2"><i class="fa fa-check"/></span>
+                                <span>Bài kiểm tra 4 kỹ năng chuẩn format đề thi thật miễn phí.</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="badge bg-warning text-dark rounded-circle p-2"><i class="fa fa-check"/></span>
+                                <span>Nhận học bổng giảm tới 15% học phí khi đăng ký sớm.</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="badge bg-warning text-dark rounded-circle p-2"><i class="fa fa-check"/></span>
+                                <span>Tặng trọn bộ tài liệu độc quyền do thầy Đặng Trần Tùng biên soạn.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="reg-card">
+                            <!-- Success State -->
+                            <div class="tiw-form-success d-none text-center py-4">
+                                <div class="text-success fs-1 mb-2"><i class="fa fa-check-circle"/></div>
+                                <h4 class="fw-bold mb-2">ĐĂNG KÝ THÀNH CÔNG!</h4>
+                                <p class="small text-muted mb-4">Chuyên viên học thuật của The IELTS Workshop sẽ liên hệ với bạn trong vòng 15 phút.</p>
+                                <button type="button" class="tiw-btn-primary btn-sm btn-reset-form">Gửi lại thông tin khác</button>
+                            </div>
+                            <!-- Form State -->
+                            <div class="tiw-form-active">
+                                <h4 class="fw-bold mb-1">Điền Thông Tin Tư Vấn</h4>
+                                <p class="small text-muted mb-3">Thông tin của bạn được bảo mật tuyệt đối 100%.</p>
+                                <div class="alert alert-danger small d-none tiw-form-alert" role="alert"/>
+                                <form class="tiw-lead-form">
+                                    <div class="mb-3">
+                                        <label class="form-label small fw-bold text-uppercase">Họ và tên *</label>
+                                        <input type="text" name="name" required="required" placeholder="Ví dụ: Nguyễn Văn A" class="form-control rounded-3 py-2"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label small fw-bold text-uppercase">Số điện thoại *</label>
+                                        <input type="tel" name="phone" required="required" placeholder="Ví dụ: 0912 345 678" class="form-control rounded-3 py-2"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label small fw-bold text-uppercase">Email</label>
+                                        <input type="email" name="email" placeholder="email@example.com" class="form-control rounded-3 py-2"/>
+                                    </div>
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-6">
+                                            <label class="form-label small fw-bold text-uppercase">Khu vực</label>
+                                            <select name="city" class="form-select rounded-3 py-2">
+                                                <option value="hanoi">Hà Nội</option>
+                                                <option value="hcm">TP.HCM</option>
+                                                <option value="online">Học Online</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label small fw-bold text-uppercase">Mục tiêu Band</label>
+                                            <select name="target" class="form-select rounded-3 py-2">
+                                                <option value="mất gốc">Từ mất gốc</option>
+                                                <option value="5.5">Mục tiêu 5.5+</option>
+                                                <option value="6.5" selected="selected">Mục tiêu 6.5+</option>
+                                                <option value="7.5">Mục tiêu 7.5+</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="tiw-btn-primary w-100 py-3 mt-2">
+                                        <i class="fa fa-paper-plane me-1"/> ĐĂNG KÝ TƯ VẤN NGAY
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

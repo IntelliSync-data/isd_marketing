@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========================================== -->
+    <!-- 1. HERO SECTION SNIPPET                    -->
+    <!-- ========================================== -->
+    <template id="s_tiw_hero" name="TIW Hero Banner">
+        <section class="s_tiw_hero oe_snippet_body">
+            <img src="/theme_theieltsworkshop/static/src/img/test-trinh-do.jpg" class="hero-bg-img" alt="TIW Hero Background"/>
+            <div class="hero-bg-overlay"></div>
+            <div class="container hero-slide">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="tiw-badge-tag bg-tiw-yellow text-tiw-dark mb-3">
+                            <span class="d-inline-block rounded-circle bg-danger" style="width: 6px; height: 6px;"></span>
+                            Miễn Phí 100%
+                        </div>
+                        <h1 class="hero-title">KIỂM TRA TRÌNH ĐỘ MIỄN PHÍ</h1>
+                        <p class="hero-subtitle">Đánh giá chính xác 4 kỹ năng chuẩn đề thi quốc tế</p>
+                        <p class="text-white-50 fs-6 mb-4">
+                            Nhận kết quả và tư vấn lộ trình học cá nhân hóa trực tiếp từ đội ngũ chuyên gia The IELTS Workshop.
+                        </p>
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-6 hero-check-item">
+                                <i class="fa fa-check-circle"></i>
+                                <span>Giáo viên 8.5 - 9.0 IELTS</span>
+                            </div>
+                            <div class="col-sm-6 hero-check-item">
+                                <i class="fa fa-check-circle"></i>
+                                <span>Phương pháp L.I.M độc quyền</span>
+                            </div>
+                            <div class="col-sm-6 hero-check-item">
+                                <i class="fa fa-check-circle"></i>
+                                <span>Chấm chữa bài chi tiết 1:1</span>
+                            </div>
+                            <div class="col-sm-6 hero-check-item">
+                                <i class="fa fa-check-circle"></i>
+                                <span>Cam kết chuẩn đầu ra văn bản</span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="/#test-online" class="tiw-btn-primary">
+                                LÀM BÀI TEST NGAY <i class="fa fa-arrow-right"></i>
+                            </a>
+                            <a href="/schedule" class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold">
+                                Xem Lịch Khai Giảng
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

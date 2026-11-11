@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Custom Topbar and Header -->
+    <template id="tiw_header" inherit_id="website.layout" name="TIW Header">
+        <xpath expr="//header" position="replace">
+            <header id="top">
+                <!-- Topbar -->
+                <div class="tiw-topbar">
+                    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="d-flex align-items-center gap-3">
+                            <span>
+                                <span class="d-inline-block rounded-circle bg-warning me-1" style="width: 8px; height: 8px;"></span>
+                                The IELTS Workshop - Trung tâm luyện thi IELTS chất lượng vàng
+                            </span>
+                            <span class="d-none d-md-inline text-muted">|</span>
+                            <span class="d-none d-md-inline text-white-50">Hệ thống 18 cơ sở tại Hà Nội &amp; TP.HCM</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="tel:19000353" class="d-flex align-items-center gap-1">
+                                <i class="fa fa-phone"></i> Hotline: 1900 0353
+                            </a>
+                            <span class="text-secondary">|</span>
+                            <a href="/#test-online" class="text-white">Thi thử Online</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+                    <div class="container">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="/">
+                            <img src="/theme_theieltsworkshop/static/src/img/logo-tiw-04.png" alt="The IELTS Workshop Logo" loading="lazy"/>
+                            <div class="d-flex flex-column">
+                                <span class="brand-title">THE IELTS <span>WORKSHOP</span></span>
+                                <span class="brand-sub">Chất Lượng Vàng Trong Luyện Thi IELTS</span>
+                            </div>
+                        </a>
+
+                        <!-- Mobile Toggler -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tiwNavbarContent" aria-controls="tiwNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- Nav Menu -->
+                        <div class="collapse navbar-collapse" id="tiwNavbarContent">
+                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="/">Trang chủ</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="tiwAboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Về TIW
+                                    </a>
+                                    <ul class="dropdown-menu shadow border-0" aria-labelledby="tiwAboutDropdown">
+                                        <li><a class="dropdown-item py-2" href="/#why-tiw">Giới thiệu TIW</a></li>
+                                        <li><a class="dropdown-item py-2" href="/ielts-trainers">Đội ngũ Giáo viên 8.0 - 9.0</a></li>
+                                        <li><a class="dropdown-item py-2" href="/#testimonials">Học viên điểm cao</a></li>
+                                        <li><a class="dropdown-item py-2" href="/contact">Hệ thống 18 cơ sở</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="tiwCourseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Khóa học
+                                    </a>
+                                    <ul class="dropdown-menu shadow border-0" aria-labelledby="tiwCourseDropdown">
+                                        <li><a class="dropdown-item py-2 fw-bold text-tiw-orange" href="/schedule">Lịch khai giảng các lớp</a></li>
+                                        <li><a class="dropdown-item py-2" href="/#courses">Lộ trình toàn diện 0 - 7.5+</a></li>
+                                        <li><a class="dropdown-item py-2" href="/#courses">Khóa Nền tảng (Freshman 0-2.5)</a></li>
+                                        <li><a class="dropdown-item py-2" href="/#courses">Khóa Pre-IELTS (Sophomore 2.5-4.5)</a></li>
+                                        <li><a class="dropdown-item py-2" href="/#courses">Khóa Chuyên sâu (Junior 4.5-6.5)</a></li>
+                                        <li><a class="dropdown-item py-2" href="/#courses">Khóa Nâng cao (Senior/Master 6.5-7.5+)</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/ielts-trainers">Giảng viên</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/schedule">Lịch khai giảng</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/contact">Liên hệ</a>
+                                </li>
+                            </ul>
+
+                            <!-- Right CTA -->
+                            <div class="d-flex align-items-center gap-2">
+                                <a href="/#test-online" class="tiw-btn-secondary btn-sm text-decoration-none">
+                                    <i class="fa fa-trophy"></i> Test Trình Độ Free
+                                </a>
+                                <a href="/#register" class="tiw-btn-primary btn-sm text-decoration-none">
+                                    Nhận Tư Vấn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </xpath>
+
+        <!-- Custom Footer -->
+        <xpath expr="//footer" position="replace">
+            <footer class="tiw-footer">
+                <div class="container pb-5">
+                    <div class="row g-4">
+                        <!-- Col 1: About & Info -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="bg-white p-1 rounded-circle" style="width: 48px; height: 48px;">
+                                    <img src="/theme_theieltsworkshop/static/src/img/logo-tiw-04.png" alt="TIW Logo" class="img-fluid"/>
+                                </div>
+                                <span class="fs-4 fw-bold text-white">THE IELTS <span class="text-tiw-orange">WORKSHOP</span></span>
+                            </div>
+                            <p class="text-secondary small leading-relaxed">
+                                The IELTS Workshop (TIW) là trung tâm luyện thi IELTS hàng đầu Việt Nam được thành lập bởi thầy Đặng Trần Tùng. Chúng tôi cam kết mang tới giải pháp học tập hiệu quả, tinh gọn và truyền cảm hứng.
+                            </p>
+                            <div class="small mt-3">
+                                <p class="mb-1 text-white"><i class="fa fa-phone text-warning me-2"></i><strong>Hotline: 1900 0353</strong></p>
+                                <p class="mb-1"><i class="fa fa-envelope text-warning me-2"></i>contact@theieltsworkshop.com</p>
+                                <p class="mb-3"><i class="fa fa-globe text-warning me-2"></i>theieltsworkshop.com</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+                                    <i class="fa fa-youtube-play"></i>
+                                </a>
+                                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok">
+                                    <span class="small fw-bold">TT</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Col 2: Về TIW -->
+                        <div class="col-lg-2 col-md-6 col-6">
+                            <h5>Về TIW</h5>
+                            <ul>
+                                <li><a href="/#why-tiw">Giới thiệu trung tâm</a></li>
+                                <li><a href="/ielts-trainers">Đội ngũ giáo viên</a></li>
+                                <li><a href="/#testimonials">Bảng vàng học viên</a></li>
+                                <li><a href="/#why-tiw">Phương pháp L.I.M</a></li>
+                                <li><a href="/#news">Tuyển dụng nhân sự</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 3: Khóa học -->
+                        <div class="col-lg-3 col-md-6 col-6">
+                            <h5>Khóa Học IELTS</h5>
+                            <ul>
+                                <li><a href="/schedule" class="text-tiw-orange fw-bold">Lịch khai giảng toàn quốc</a></li>
+                                <li><a href="/#courses">Khóa Freshman (0 - 2.5)</a></li>
+                                <li><a href="/#courses">Khóa Sophomore (2.5 - 4.5)</a></li>
+                                <li><a href="/#courses">Khóa Junior (4.5 - 5.5)</a></li>
+                                <li><a href="/#courses">Khóa Pre-Senior (5.5 - 6.5)</a></li>
+                                <li><a href="/#courses">Khóa Senior &amp; Master (6.5 - 7.5+)</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 4: Hỗ trợ -->
+                        <div class="col-lg-3 col-md-6">
+                            <h5>Chính Sách &amp; Hỗ Trợ</h5>
+                            <ul>
+                                <li><a href="/#test-online">Kiểm tra trình độ miễn phí</a></li>
+                                <li><a href="/#courses">Chính sách cam kết đầu ra</a></li>
+                                <li><a href="/#courses">Chính sách học bù &amp; bảo lưu</a></li>
+                                <li><a href="/#register">Ưu đãi học phí theo tháng</a></li>
+                                <li><a href="/contact">Hệ thống 18 cơ sở</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-top border-secondary py-3 text-center small text-secondary">
+                    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+                        <p class="mb-0">© The IELTS Workshop. All rights reserved.</p>
+                        <p class="mb-0">Odoo 18 &amp; 19 Theme by The IELTS Workshop Team.</p>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Floating Widgets -->
+            <div class="tiw-floating-widgets">
+                <a href="tel:19000353" class="floating-pill pill-hotline" title="Hotline 1900 0353">
+                    <i class="fa fa-phone"></i>
+                    <span class="d-none d-sm-inline">Hotline: 1900 0353</span>
+                </a>
+                <a href="/#test-online" class="floating-pill pill-test" title="Test IELTS Online">
+                    <i class="fa fa-file-text-o"></i>
+                    <span class="d-none d-sm-inline">Test Free 4 Kỹ Năng</span>
+                </a>
+                <button type="button" class="btn-scroll-top d-none" aria-label="Scroll to top">
+                    <i class="fa fa-arrow-up"></i>
+                </button>
+            </div>
+        </xpath>
+    </template>
+</odoo>
+

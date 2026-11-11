@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========================================== -->
+    <!-- 5. MINI TEST INTERACTIVE SNIPPET           -->
+    <!-- ========================================== -->
+    <template id="s_tiw_mini_test" name="TIW Mini Test Widget">
+        <section id="test-online" class="s_tiw_mini_test oe_snippet_body">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <span class="tiw-badge-tag bg-warning bg-opacity-25 text-tiw-dark mb-2">Trải nghiệm tức thì</span>
+                    <h2 class="display-6 fw-bold text-tiw-dark">MINI TEST <span class="text-tiw-orange">ĐÁNH GIÁ TRÌNH ĐỘ NHANH</span></h2>
+                    <div class="bg-warning mx-auto my-3 rounded" style="width: 60px; height: 4px;"></div>
+                    <p class="text-muted">Thử sức nhanh với 4 câu hỏi ngữ pháp &amp; từ vựng để ước lượng sơ bộ band điểm của bạn.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="mini-test-box">
+                            <!-- Active View -->
+                            <div class="mini-test-active-view">
+                                <div class="d-flex justify-content-between small fw-bold text-muted mb-2">
+                                    <span class="mini-test-step">Câu hỏi 1 / 4</span>
+                                    <span>Tiến độ</span>
+                                </div>
+                                <div class="progress mb-4" style="height: 8px;">
+                                    <div class="progress-bar bg-warning mini-test-progress" role="progressbar" style="width: 25%;"></div>
+                                </div>
+                                <h4 class="fw-bold text-tiw-dark mini-test-question-text mb-4">
+                                    Đang tải câu hỏi...
+                                </h4>
+                                <div class="mini-test-options mb-4">
+                                    <!-- Dynamic options inserted by JS -->
+                                </div>
+                                <div class="d-flex justify-content-between pt-3 border-top">
+                                    <button type="button" class="btn btn-light rounded-pill px-4 btn-prev-question" disabled="disabled">Quay lại</button>
+                                    <button type="button" class="tiw-btn-primary btn-sm btn-next-question">Câu Tiếp Theo</button>
+                                </div>
+                            </div>
+                            <!-- Result View -->
+                            <div class="mini-test-result-view d-none text-center py-4">
+                                <div class="rounded-circle bg-warning bg-opacity-25 d-inline-flex p-3 text-tiw-orange mb-3">
+                                    <i class="fa fa-trophy fs-1"></i>
+                                </div>
+                                <h3 class="fw-bold mb-2">KẾT QUẢ MINI TEST CỦA BẠN</h3>
+                                <p class="text-muted mb-3">Bạn trả lời đúng: <strong class="text-tiw-orange fs-4 result-score">4/4</strong> câu</p>
+                                <div class="bg-white p-4 rounded-4 border mx-auto mb-4" style="max-width: 450px;">
+                                    <span class="text-uppercase small fw-bold text-muted d-block mb-1">Đánh giá sơ bộ:</span>
+                                    <h5 class="fw-bold text-tiw-orange mb-2 result-band">Band 7.0 - 8.0 (Nâng cao)</h5>
+                                    <p class="small text-muted mb-0">Đăng ký thông tin bên dưới để được kiểm tra 4 kỹ năng đầy đủ cùng giáo viên.</p>
+                                </div>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <a href="/#register" class="tiw-btn-primary text-decoration-none">Đăng Ký Test 4 Kỹ Năng Đầy Đủ</a>
+                                    <button type="button" class="btn btn-outline-secondary rounded-pill px-4 btn-restart-test"><i class="fa fa-refresh me-1"></i> Làm lại</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

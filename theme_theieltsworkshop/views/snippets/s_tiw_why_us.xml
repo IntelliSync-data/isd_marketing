@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========================================== -->
+    <!-- 2. WHY CHOOSE US SNIPPET                   -->
+    <!-- ========================================== -->
+    <template id="s_tiw_why_us" name="TIW Why Choose Us">
+        <section id="why-tiw" class="py-5 bg-white oe_snippet_body">
+            <div class="container py-4">
+                <div class="text-center max-w-3xl mx-auto mb-5">
+                    <span class="tiw-badge-tag bg-warning bg-opacity-25 text-tiw-dark mb-2">Giá trị cốt lõi</span>
+                    <h2 class="display-6 fw-bold text-tiw-dark">TẠI SAO CHỌN <span class="text-tiw-orange">THE IELTS WORKSHOP?</span></h2>
+                    <div class="bg-warning mx-auto my-3 rounded" style="width: 60px; height: 4px;"></div>
+                    <p class="text-muted">Hơn 8 năm phát triển, đồng hành cùng hơn 50.000 học viên chinh phục mục tiêu IELTS.</p>
+                </div>
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-column gap-4">
+                            <div class="p-4 bg-light rounded-4 border d-flex gap-4">
+                                <img src="/theme_theieltsworkshop/static/src/img/icon1.png" style="width: 48px; height: 48px;" alt="Icon"/>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Đội ngũ giảng viên giỏi chuyên môn</h5>
+                                    <p class="small text-muted mb-0">100% giáo viên tại TIW đều sở hữu 8.0 - 9.0 IELTS và chứng chỉ sư phạm quốc tế CELTA/TESOL.</p>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-light rounded-4 border d-flex gap-4">
+                                <img src="/theme_theieltsworkshop/static/src/img/icon4.png" style="width: 48px; height: 48px;" alt="Icon"/>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Chiến thuật học tập tinh gọn</h5>
+                                    <p class="small text-muted mb-0">Lộ trình học cô đọng, bám sát cấu trúc đề thi thực tế, không quá tải mà vẫn tối ưu hóa thời gian.</p>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-light rounded-4 border d-flex gap-4">
+                                <img src="/theme_theieltsworkshop/static/src/img/icon3.png" style="width: 48px; height: 48px;" alt="Icon"/>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Mô hình LEARN – INQUIRE – MASTER (L.I.M)</h5>
+                                    <p class="small text-muted mb-0">Phương pháp độc quyền kích thích tư duy ngôn ngữ chủ động, phản xạ tự nhiên.</p>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-light rounded-4 border d-flex gap-4">
+                                <img src="/theme_theieltsworkshop/static/src/img/icon2.png" style="width: 48px; height: 48px;" alt="Icon"/>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Môi trường tự chủ &amp; sáng tạo</h5>
+                                    <p class="small text-muted mb-0">Không gian hiện đại, phòng tự học Study Space mở và thư viện phong phú.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative">
+                            <div class="rounded-4 overflow-hidden shadow-lg border">
+                                <img src="/theme_theieltsworkshop/static/src/img/tung-1.jpg" alt="Thầy Đặng Trần Tùng" class="img-fluid w-100" style="max-height: 520px; object-fit: cover;"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

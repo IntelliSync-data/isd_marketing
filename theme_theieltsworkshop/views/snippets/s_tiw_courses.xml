@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========================================== -->
+    <!-- 3. COURSES ROADMAP SNIPPET                 -->
+    <!-- ========================================== -->
+    <template id="s_tiw_courses" name="TIW Courses Roadmap">
+        <section id="courses" class="s_tiw_courses oe_snippet_body">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="tiw-badge-tag bg-warning bg-opacity-25 text-tiw-dark mb-2">Lộ trình học bài bản</span>
+                    <h2 class="display-6 fw-bold text-tiw-dark">CHỌN KHÓA HỌC <span class="text-tiw-orange">PHÙ HỢP NHẤT VỚI BẠN</span></h2>
+                    <div class="bg-warning mx-auto my-3 rounded" style="width: 60px; height: 4px;"></div>
+                    <p class="text-muted">Hệ thống phân chia rõ ràng theo từng trình độ đầu vào giúp bạn tiến bộ vượt bậc.</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="course-card">
+                            <div>
+                                <span class="badge bg-warning text-dark mb-3">Mất gốc tiếng Anh</span>
+                                <h4 class="fw-bold text-tiw-dark">Freshman (0 - 2.5)</h4>
+                                <p class="small text-muted">Xây dựng lại nền móng vững chắc, chuẩn hóa 44 âm ngữ âm IPA và 1.000 từ vựng cốt lõi.</p>
+                                <ul class="small text-muted ps-3 mb-4">
+                                    <li>Chuẩn hóa ngữ âm IPA</li>
+                                    <li>Nắm chắc 12 thì cơ bản</li>
+                                    <li>Thời lượng: 24 buổi (2 tháng)</li>
+                                </ul>
+                            </div>
+                            <a href="/#register" class="tiw-btn-primary btn-sm w-100 text-decoration-none">Đăng ký tư vấn</a>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="course-card">
+                            <div>
+                                <span class="badge bg-warning text-dark mb-3">Pre-IELTS</span>
+                                <h4 class="fw-bold text-tiw-dark">Sophomore (2.5 - 4.5)</h4>
+                                <p class="small text-muted">Làm quen cấu trúc 4 kỹ năng đề thi IELTS, rèn luyện kỹ năng Skimming, Scanning.</p>
+                                <ul class="small text-muted ps-3 mb-4">
+                                    <li>Format đề thi IELTS chuẩn</li>
+                                    <li>Keywords Listening Part 1-2</li>
+                                    <li>Thời lượng: 24 buổi (2 tháng)</li>
+                                </ul>
+                            </div>
+                            <a href="/#register" class="tiw-btn-primary btn-sm w-100 text-decoration-none">Đăng ký tư vấn</a>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="course-card border-warning">
+                            <div>
+                                <span class="badge bg-danger text-white mb-3">Phổ biến nhất</span>
+                                <h4 class="fw-bold text-tiw-dark">Junior (4.5 - 5.5)</h4>
+                                <p class="small text-muted">Phát triển tư duy phân tích đề bài, viết biểu đồ Task 1 và phản xạ Speaking Part 1 &amp; 2.</p>
+                                <ul class="small text-muted ps-3 mb-4">
+                                    <li>Chiến thuật xử lý mọi dạng đề</li>
+                                    <li>Chấm chữa bài chi tiết 1:1</li>
+                                    <li>Thời lượng: 28 buổi (2.5 tháng)</li>
+                                </ul>
+                            </div>
+                            <a href="/#register" class="tiw-btn-primary btn-sm w-100 text-decoration-none">Đăng ký tư vấn</a>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="course-card">
+                            <div>
+                                <span class="badge bg-dark text-warning mb-3">Về đích 7.5+</span>
+                                <h4 class="fw-bold text-tiw-dark">Senior &amp; Master</h4>
+                                <p class="small text-muted">Nâng cấp tư duy lập luận phản biện Part 3, làm chủ từ vựng C1-C2 Collocations &amp; Idioms.</p>
+                                <ul class="small text-muted ps-3 mb-4">
+                                    <li>Học cùng giáo viên 9.0</li>
+                                    <li>Luyện áp lực thi thật</li>
+                                    <li>Thời lượng: 32 buổi (3 tháng)</li>
+                                </ul>
+                            </div>
+                            <a href="/#register" class="tiw-btn-primary btn-sm w-100 text-decoration-none">Đăng ký tư vấn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

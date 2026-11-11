@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Odoo 18: khối được thả vào //snippets[@id='snippet_structure'], mỗi khối
+         bắt buộc có string và group. Thiếu group thì khối không hiện trong panel. -->
+    <template id="snippets" inherit_id="website.snippets" priority="8">
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+            <t t-snippet="theme_theieltsworkshop.s_tiw_hero" string="TIW Hero Banner" group="intro"
+               t-thumbnail="/theme_theieltsworkshop/static/src/img/test-trinh-do.jpg">
+                <keywords>hero, banner, ielts, tiw, carousel, headline</keywords>
+            </t>
+            <t t-snippet="theme_theieltsworkshop.s_tiw_why_us" string="TIW Why Choose Us" group="content"
+               t-thumbnail="/theme_theieltsworkshop/static/src/img/tung-1.jpg">
+                <keywords>why, values, founder, ielts, tiw</keywords>
+            </t>
+            <t t-snippet="theme_theieltsworkshop.s_tiw_courses" string="TIW Courses Roadmap" group="columns"
+               t-thumbnail="/theme_theieltsworkshop/static/src/img/khoa-hoc-tiw.jpg">
+                <keywords>courses, roadmap, ielts, tiw, freshman, sophomore</keywords>
+            </t>
+            <t t-snippet="theme_theieltsworkshop.s_tiw_teachers" string="TIW Teachers Grid" group="people"
+               t-thumbnail="/theme_theieltsworkshop/static/src/img/GV-9.0.webp">
+                <keywords>teachers, team, instructors, ielts, tiw</keywords>
+            </t>
+            <t t-snippet="theme_theieltsworkshop.s_tiw_mini_test" string="TIW Mini Test" group="content"
+               t-thumbnail="/theme_theieltsworkshop/static/src/img/test-trinh-do.jpg">
+                <keywords>test, quiz, mini test, ielts, tiw</keywords>
+            </t>
+            <t t-snippet="theme_theieltsworkshop.s_tiw_registration" string="TIW Lead Form" group="contact_and_forms"
+               t-thumbnail="/theme_theieltsworkshop/static/src/img/lo-trinh-hoc-ielts-banner.jpg">
+                <keywords>form, register, lead, contact, ielts, tiw</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========================================== -->
+    <!-- 4. TEACHERS SECTION SNIPPET                -->
+    <!-- ========================================== -->
+    <template id="s_tiw_teachers" name="TIW Teachers Grid">
+        <section id="teachers" class="s_tiw_teachers oe_snippet_body">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="tiw-badge-tag bg-warning bg-opacity-25 text-tiw-dark mb-2">Đội ngũ tinh hoa</span>
+                    <h2 class="display-6 fw-bold text-tiw-dark">ĐỘI NGŨ <span class="text-tiw-orange">GIẢNG VIÊN 8.5 - 9.0 IELTS</span></h2>
+                    <div class="bg-warning mx-auto my-3 rounded" style="width: 60px; height: 4px;"></div>
+                    <p class="text-muted">100% giáo viên tại TIW sở hữu chứng chỉ IELTS xuất sắc và bằng sư phạm quốc tế CELTA.</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Teacher 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="teacher-card">
+                            <div class="teacher-img-wrap">
+                                <img src="/theme_theieltsworkshop/static/src/img/tung-1.jpg" alt="Đặng Trần Tùng"/>
+                                <span class="teacher-score-badge"><i class="fa fa-trophy"></i> 9.0 IELTS</span>
+                            </div>
+                            <div class="p-4">
+                                <h5 class="fw-bold teacher-name mb-1">Thầy Đặng Trần Tùng</h5>
+                                <p class="small text-tiw-orange fw-bold mb-2">Nhà sáng lập The IELTS Workshop</p>
+                                <p class="small text-muted mb-0">Người đầu tiên 5 lần đạt 9.0 IELTS tại Việt Nam. Cố vấn học thuật cho nhiều chương trình của VTV.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="teacher-card">
+                            <div class="teacher-img-wrap">
+                                <img src="/theme_theieltsworkshop/static/src/img/Vu-Duc-Long.jpg" alt="Vũ Đức Long"/>
+                                <span class="teacher-score-badge"><i class="fa fa-trophy"></i> 9.0 IELTS</span>
+                            </div>
+                            <div class="p-4">
+                                <h5 class="fw-bold teacher-name mb-1">Thầy Vũ Đức Long</h5>
+                                <p class="small text-tiw-orange fw-bold mb-2">Chuyên gia đào tạo IELTS cao cấp</p>
+                                <p class="small text-muted mb-0">9.0 Reading &amp; Listening, 8.5 Writing &amp; Speaking. Chứng chỉ quốc tế CELTA hạng Pass A.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="teacher-card">
+                            <div class="teacher-img-wrap">
+                                <img src="/theme_theieltsworkshop/static/src/img/Mai-Son-Tung-2-1.jpg" alt="Mai Sơn Tùng"/>
+                                <span class="teacher-score-badge"><i class="fa fa-trophy"></i> 8.5 IELTS</span>
+                            </div>
+                            <div class="p-4">
+                                <h5 class="fw-bold teacher-name mb-1">Thầy Mai Sơn Tùng</h5>
+                                <p class="small text-tiw-orange fw-bold mb-2">Giảng viên IELTS Chuyên sâu</p>
+                                <p class="small text-muted mb-0">Cử nhân Sư phạm Tiếng Anh ĐHQGHN, truyền cảm hứng xóa bỏ rào cản phát âm cho học viên.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>
